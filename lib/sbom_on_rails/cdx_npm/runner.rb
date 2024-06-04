@@ -3,10 +3,12 @@ require 'open3'
 module SbomOnRails
   module CdxNpm
     class Runner
-      attr_reader :path
+      attr_reader :path, :omit_dev
 
-      def initialize(project_dir)
+      def initialize(project_dir, omit_dev = false)
         @path = project_dir
+        @omit_dev = omit_dev
+        @command_line = build_command_line
       end
 
       def run
@@ -14,9 +16,17 @@ module SbomOnRails
         raise Errors::NoExeError, "could not locate cyclonedx-npm" unless found_bin
         nm_path = File.join(@path, "node_modules")
         raise Errors::NoNodeModulesError, "no node_modules directory found" unless File.exist?(nm_path)
-        stdout, stderr, status = Open3.capture3("cyclonedx-npm --flatten-components --spec-version 1.5 --output-file -", :chdir => @path)
+        stdout, stderr, status = Open3.capture3(@command_line, :chdir => @path)
         raise Errors::CommandRunError, stderr unless status == 0
         stdout
+      end
+
+      def build_command_line
+        command_line = "cyclonedx-npm --flatten-components --spec-version 1.5"
+        if omit_dev
+          command_line = command_line + " --omit dev"
+        end
+        command_line + " --output-file -"
       end
 
       def which(cmd)

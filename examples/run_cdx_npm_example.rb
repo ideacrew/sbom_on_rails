@@ -14,7 +14,7 @@ ruby_runner = SbomOnRails::GemReport::Runner.new(
     File.dirname(__FILE__),
     "../../enroll/Gemfile.lock"
   ),
-  true
+  false
 )
 
 ruby_sbom = ruby_runner.run
@@ -23,7 +23,8 @@ js_runner = SbomOnRails::CdxNpm::Runner.new(
   File.join(
     File.dirname(__FILE__),
     "../../enroll"
-  )
+  ),
+  true
 )
 
 js_result = js_runner.run

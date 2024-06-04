@@ -38,14 +38,34 @@
       "name": "datatables.net",
       "version": "1.13.5",
       "description": "Paginate, search and order HTML tables",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
       "purl": "pkg:npm/datatables.net@1.13.5"
+    },
+    {
+      "type": "library",
+      "bom-ref": "jquery-mask-plugin@1.11.4",
+      "author": "Igor Escobar",
+      "name": "jquery-mask-plugin",
+      "version": "1.11.4",
+      "description": "A jQuery Plugin to make masks on form fields and HTML elements.",
+      "purl": "pkg:npm/jquery-mask-plugin@1.11.4"
+    },
+    {
+      "type": "library",
+      "bom-ref": "selectric@1.9.2",
+      "author": "Leonardo Santos",
+      "name": "selectric",
+      "version": "1.9.2",
+      "description": "jQuery Selectric is a jQuery plugin designed to help at stylizing and manipulating HTML selects.",
+      "purl": "pkg:npm/selectric@1.9.2"
+    },
+    {
+      "type": "library",
+      "bom-ref": "ckeditor@4.7.1",
+      "author": "CKSource (https://cksource.com/)",
+      "name": "ckeditor",
+      "version": "4.7.1",
+      "description": "JavaScript WYSIWYG web text editor.",
+      "purl": "pkg:npm/ckeditor@4.7.1"
     }
   ],
   "dependencies": [
@@ -53,7 +73,10 @@
       "ref": "enroll-SHA_PLACEHOLDER",
       "dependsOn": [
         "bootstrap@3.4.1",
-        "datatables.net@1.13.5"
+        "datatables.net@1.13.5",
+        "jquery-mask-plugin@1.11.4",
+        "selectric@1.9.2",
+        "ckeditor@4.7.1"
       ]
     }
   ]
