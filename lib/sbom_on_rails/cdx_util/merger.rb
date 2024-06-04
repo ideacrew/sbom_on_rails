@@ -1,4 +1,6 @@
 require "tempfile"
+require "json"
+require "set"
 
 module SbomOnRails
   module CdxUtil
@@ -8,6 +10,43 @@ module SbomOnRails
       end
 
       def run(*sboms)
+        first_pass_result = run_first_pass(sboms)
+        merge_duplicate_dependencies(first_pass_result)
+      end
+
+      private
+
+      def deduped_deps(deps)
+        depset = Hash.new { |h,k| h[k] = Set.new }
+        deps.each do |dep|
+          dep_id = dep["ref"]
+          dep_vals = dep["dependsOn"]
+          dep_vals ||= []
+          depset[dep_id].merge(dep_vals)
+        end
+
+        resulting_deps = Array.new
+        depset.each_pair do |k,v|
+          if v.any?
+            resulting_deps << {
+              "ref" => k,
+              "dependsOn" => v.to_a
+            }
+          end
+        end
+        resulting_deps
+      end
+
+      def merge_duplicate_dependencies(json_string)
+        json_data = JSON.parse(json_string)
+        dep_items = json_data["dependencies"]
+        dep_items ||= []
+        deps = dep_items.dup
+        json_data["dependencies"] = deduped_deps(deps)
+        JSON.generate(json_data)
+      end
+
+      def run_first_pass(sboms)
         t_files = Array.new
         begin
           sboms.each do |sbom|
@@ -28,8 +67,6 @@ module SbomOnRails
           end
         end
       end
-
-      private
 
       def assign_temp_file
       end

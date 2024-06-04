@@ -13,7 +13,8 @@ ruby_runner = SbomOnRails::GemReport::Runner.new(
   File.join(
     File.dirname(__FILE__),
     "../../enroll/Gemfile.lock"
-  )
+  ),
+  true
 )
 
 ruby_sbom = ruby_runner.run
@@ -30,6 +31,10 @@ js_result = js_runner.run
 reformatter = SbomOnRails::CdxNpm::Reformatter.new(project_name, sha)
 js_sbom = reformatter.reformat(js_result)
 
+custom_asset_reformatter = SbomOnRails::CustomAssets::Reformatter.new(project_name, sha)
+
+custom_asset_sbom = custom_asset_reformatter.reformat(File.read("examples/enroll_custom_asset_sbom.json"))
+
 merger = SbomOnRails::CdxUtil::Merger.new
-full_sbom = merger.run(ruby_sbom, js_sbom)
+full_sbom = merger.run(ruby_sbom, js_sbom, custom_asset_sbom)
 puts full_sbom
