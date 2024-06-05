@@ -68,24 +68,9 @@ module SbomOnRails
         end
       end
 
-      def assign_temp_file
-      end
-
       def locate_cdx_util
-        found_bin = which("cyclonedx")
-        found_bin ||= which("cyclonedx-cli")
-        raise Errors::NoExeError, "could not locate cyclonedx" unless found_bin
-      end
-
-      def which(cmd)
-        exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
-        ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
-          exts.each do |ext|
-            exe = File.join(path, "#{cmd}#{ext}")
-            return exe if File.executable?(exe) && !File.directory?(exe)
-          end
-        end
-        nil
+        found_bin = SbomOnRails::Utils::Whicher.find("cyclonedx", "cyclonedx-cli")
+        raise Errors::NoExeError, "could not locate cyclonedx as, as either cyclonedx or cyclonedx-cli" unless found_bin
       end
     end
   end

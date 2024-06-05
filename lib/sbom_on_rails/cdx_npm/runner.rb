@@ -14,7 +14,7 @@ module SbomOnRails
       end
 
       def run
-        found_bin = which("cyclonedx-npm")
+        found_bin = ::SbomOnRails::Utils::Whicher.find("cyclonedx-npm")
         raise Errors::NoExeError, "could not locate cyclonedx-npm" unless found_bin
         nm_path = File.join(@path, "node_modules")
         raise Errors::NoNodeModulesError, "no node_modules directory found" unless File.exist?(nm_path)
@@ -29,17 +29,6 @@ module SbomOnRails
           command_line = command_line + " --omit dev"
         end
         command_line + " --output-file -"
-      end
-
-      def which(cmd)
-        exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
-        ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
-          exts.each do |ext|
-            exe = File.join(path, "#{cmd}#{ext}")
-            return exe if File.executable?(exe) && !File.directory?(exe)
-          end
-        end
-        nil
       end
     end
   end
