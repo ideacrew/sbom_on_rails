@@ -55,18 +55,7 @@ module SbomOnRails
           "bomFormat" => "CycloneDX",
           "specVersion" => "1.5",
           "metadata" => {
-            "component" =>
-            {
-              "type" => "application",
-              "name" => @project_name,
-              "bom-ref" => generated_bom_id,
-              "hashes" => [
-                {
-                  "alg" => "SHA-1",
-                  "content" => @sha
-                }
-              ]
-            }
+              "component" => @component_definition.to_hash
           }
         }
       end

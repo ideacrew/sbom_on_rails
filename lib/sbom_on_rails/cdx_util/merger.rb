@@ -11,7 +11,7 @@ module SbomOnRails
 
       def run(*sboms)
         first_pass_result = run_first_pass(sboms)
-        merge_duplicate_dependencies(first_pass_result)
+        latest_result = merge_duplicate_dependencies(first_pass_result)
       end
 
       private

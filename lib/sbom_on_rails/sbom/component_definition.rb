@@ -16,7 +16,7 @@ module SbomOnRails
       end
 
       def to_hash
-        {
+        data = {
           "type" => "application",
           "name" => @project_name,
           "bom-ref" => bom_ref,
@@ -27,12 +27,27 @@ module SbomOnRails
             }
           ]
         }
+        if @github_url
+          data["externalReferences"] ||= []
+          data["externalReferences"] << {
+            "url" => @github_url,
+            "type" => "vcs",
+            "hashes" => [
+              {
+                "alg" => "SHA-1",
+                "content" => @sha
+              }
+            ]
+          }
+        end
+        data
       end
 
       private
 
       def parse_options(opts)
-        options = opts.collect{|k,v| [k.to_s, stringify_keys(v)]}.to_h
+        options = opts.collect{|k,v| [k.to_s, v]}.to_h
+        @github_url = options["github"] if options["github"]
       end
     end
   end

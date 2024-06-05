@@ -5,7 +5,8 @@ sha = "8873b9b77132afe6b837042e89e6e3c5dcc8306d"
 
 component_def = SbomOnRails::Sbom::ComponentDefinition.new(
   project_name,
-  sha
+  sha,
+  { github: "https://github.com/ideacrew/enroll" }
 )
 
 ruby_runner = SbomOnRails::GemReport::Runner.new(
@@ -49,5 +50,5 @@ dpkg_result = dpkg_reporter.run(
 )
 
 merger = SbomOnRails::CdxUtil::Merger.new
-full_sbom = merger.run(ruby_sbom, js_sbom, custom_asset_sbom, dpkg_result)
+full_sbom = merger.run(ruby_sbom, js_sbom, custom_asset_sbom)
 puts full_sbom

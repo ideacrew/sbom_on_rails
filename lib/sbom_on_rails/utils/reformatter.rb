@@ -12,6 +12,12 @@ module SbomOnRails
         bom_ref = select_main_project_from(data)
         new_bom_ref = @component_definition.bom_ref
         data["metadata"]["component"] = @component_definition.to_hash
+        component_filter = data["components"]
+        component_filter ||= []
+        filtered_components = component_filter.reject do |comp|
+          comp["bom-ref"] == bom_ref
+        end
+        data["components"] = filtered_components
         new_json = JSON.generate(data)
         new_json.gsub("\"#{bom_ref}\"", "\"#{new_bom_ref}\"")
       end
