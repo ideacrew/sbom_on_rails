@@ -3,9 +3,13 @@ require "sbom_on_rails"
 project_name = "enroll"
 sha = "8873b9b77132afe6b837042e89e6e3c5dcc8306d"
 
-ruby_runner = SbomOnRails::GemReport::Runner.new(
+component_def = SbomOnRails::Sbom::ComponentDefinition.new(
   project_name,
-  sha,
+  sha
+)
+
+ruby_runner = SbomOnRails::GemReport::Runner.new(
+  component_def,
   File.join(
     File.dirname(__FILE__),
     "../../enroll/Gemfile"
@@ -20,6 +24,7 @@ ruby_runner = SbomOnRails::GemReport::Runner.new(
 ruby_sbom = ruby_runner.run
 
 js_runner = SbomOnRails::CdxNpm::Runner.new(
+  component_def,
   File.join(
     File.dirname(__FILE__),
     "../../enroll"
@@ -27,16 +32,13 @@ js_runner = SbomOnRails::CdxNpm::Runner.new(
   true
 )
 
-js_result = js_runner.run
+js_sbom = js_runner.run
 
-reformatter = SbomOnRails::CdxNpm::Reformatter.new(project_name, sha)
-js_sbom = reformatter.reformat(js_result)
-
-custom_asset_reformatter = SbomOnRails::CustomAssets::Reformatter.new(project_name, sha)
+custom_asset_reformatter = SbomOnRails::Utils::Reformatter.new(component_def)
 
 custom_asset_sbom = custom_asset_reformatter.reformat(File.read("examples/enroll_custom_asset_sbom.json"))
 
-dpkg_reporter = SbomOnRails::Dpkg::DebianReport.new(project_name, sha)
+dpkg_reporter = SbomOnRails::Dpkg::DebianReport.new(component_def)
 dpkg_result = dpkg_reporter.run(
   File.read(
     File.join(

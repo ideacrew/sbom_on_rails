@@ -3,13 +3,12 @@ module SbomOnRails
     class DebianReport
       attr_reader :project_name, :sha
 
-      def initialize(name, s)
-        @project_name = name
-        @sha = s
+      def initialize(component_def)
+        @component_definition = component_def
       end
 
       def run(dpkg_list_output)
-        bom_id = @project_name + "-" + @sha
+        bom_id = @component_definition.bom_ref
         data = generate_metadata(bom_id)
         components = parse_dpkg_list(dpkg_list_output)
         deps_list = components.map { |c| c["bom-ref"] }

@@ -3,12 +3,14 @@ require 'open3'
 module SbomOnRails
   module CdxNpm
     class Runner
-      attr_reader :path, :omit_dev
+      attr_reader :component_definition, :path, :omit_dev
 
-      def initialize(project_dir, omit_dev = false)
+      def initialize(component_def, project_dir, omit_dev = false)
+        @component_definition = component_def
         @path = project_dir
         @omit_dev = omit_dev
         @command_line = build_command_line
+        @reformatter = ::SbomOnRails::Utils::Reformatter.new(@component_definition)
       end
 
       def run
@@ -18,7 +20,7 @@ module SbomOnRails
         raise Errors::NoNodeModulesError, "no node_modules directory found" unless File.exist?(nm_path)
         stdout, stderr, status = Open3.capture3(@command_line, :chdir => @path)
         raise Errors::CommandRunError, stderr unless status == 0
-        stdout
+        @reformatter.reformat(stdout)
       end
 
       def build_command_line

@@ -27,10 +27,16 @@ describe SbomOnRails::GemReport::Runner, "given:
       )
     end
 
+    let(:component_def) do
+      SbomOnRails::Sbom::ComponentDefinition.new(
+        project_name,
+        sha
+      )
+    end
+
     subject do
       described_class.new(
-        project_name,
-        sha,
+        component_def,
         gemfile_path,
         lockfile_path
       )
