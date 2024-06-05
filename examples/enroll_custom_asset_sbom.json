@@ -66,6 +66,42 @@
       "version": "4.7.1",
       "description": "JavaScript WYSIWYG web text editor.",
       "purl": "pkg:npm/ckeditor@4.7.1"
+    },
+    {
+      "type": "application",
+      "bom-ref": "ruby-debian@2.7.8",
+      "author": "Yukihiro Matsumoto",
+      "name": "ruby-debian",
+      "version": "2.7.8",
+      "description": "Debian Ruby",
+      "purl": "pkg:deb/debian/ruby@2.7.8"
+    },
+    {
+      "type": "application",
+      "bom-ref": "ruby-source@2.7.8-r0",
+      "author": "Yukihiro Matsumoto",
+      "name": "ruby-source",
+      "version": "2.7.8-r0",
+      "description": "Source Ruby",
+      "purl": "pkg:apk/alpine/ruby@2.7.8-r0?arch=source"
+    },
+    {
+      "type": "application",
+      "bom-ref": "ruby-libs@2.7.8-r0",
+      "author": "Yukihiro Matsumoto",
+      "name": "ruby-libs",
+      "version": "2.7.8-r0",
+      "description": "Source Ruby Libs",
+      "purl": "pkg:apk/alpine/ruby-libs@2.7.8-r0?arch=source"
+    },
+    {
+      "type": "application",
+      "bom-ref": "ruby-devel@2.7.8-r0",
+      "author": "Yukihiro Matsumoto",
+      "name": "ruby-devel",
+      "version": "2.7.8-r0",
+      "description": "Source Ruby Devel",
+      "purl": "pkg:apk/alpine/ruby-dev@2.7.8-r0?arch=source"
     }
   ],
   "dependencies": [
@@ -76,7 +112,11 @@
         "datatables.net@1.13.5",
         "jquery-mask-plugin@1.11.4",
         "selectric@1.9.2",
-        "ckeditor@4.7.1"
+        "ckeditor@4.7.1",
+        "ruby-debian@2.7.8p225",
+        "ruby-source@2.7.8-r0",
+        "ruby-libs@2.7.8-r0",
+        "ruby-devel@2.7.8-r0"
       ]
     }
   ]

@@ -73,6 +73,7 @@ module SbomOnRails
 
       def locate_cdx_util
         found_bin = which("cyclonedx")
+        found_bin ||= which("cyclonedx-cli")
         raise Errors::NoExeError, "could not locate cyclonedx" unless found_bin
       end
 

@@ -1,0 +1,10 @@
+items:
+  - type: rubygems
+    gemfile_location: ../spec/example_data/Gemfile
+    lockfile_location: ../spec/example_data/Gemfile.lock
+  - type: dpkg_list
+    package_list_file: ./packages.txt
+  - type: npm
+    directory: ../../enroll
+  - type: custom_sbom
+    sbom_file: ./enroll_custom_asset_sbom.json
