@@ -14,7 +14,7 @@ ruby_runner = SbomOnRails::GemReport::Runner.new(
     File.dirname(__FILE__),
     "../../enroll/Gemfile.lock"
   ),
-  false
+  true
 )
 
 ruby_sbom = ruby_runner.run
@@ -36,6 +36,16 @@ custom_asset_reformatter = SbomOnRails::CustomAssets::Reformatter.new(project_na
 
 custom_asset_sbom = custom_asset_reformatter.reformat(File.read("examples/enroll_custom_asset_sbom.json"))
 
+dpkg_reporter = SbomOnRails::Dpkg::DebianReport.new(project_name, sha)
+dpkg_result = dpkg_reporter.run(
+  File.read(
+    File.join(
+      File.dirname(__FILE__),
+      "packages.txt"
+    )
+  )
+)
+
 merger = SbomOnRails::CdxUtil::Merger.new
-full_sbom = merger.run(ruby_sbom, js_sbom, custom_asset_sbom)
+full_sbom = merger.run(ruby_sbom, js_sbom, custom_asset_sbom, dpkg_result)
 puts full_sbom
