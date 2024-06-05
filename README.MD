@@ -14,3 +14,5 @@ Each SBOM generation goes through one or more phases:
 Right now, the project supports SBOM generation for:
 1. RubyGems via GemReport
 2. NPM via CycloneDX NPM
+3. Custom SBOMs (useful for things you can't detect automatically)
+4. Debian DPKG (ubuntu support is planned - only does debian for now)
