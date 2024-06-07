@@ -15,7 +15,7 @@ module SbomOnRails
           runner = SbomOnRails::CdxNpm::Runner.new(
             component_definition,
             @directory,
-            true
+            false
           )
           runner.run
         end
