@@ -1,4 +1,5 @@
 require 'open3'
+require 'json'
 
 module SbomOnRails
   module CdxNpm
@@ -20,7 +21,25 @@ module SbomOnRails
         raise Errors::NoNodeModulesError, "no node_modules directory found" unless File.exist?(nm_path)
         stdout, stderr, status = Open3.capture3(@command_line, :chdir => @path)
         raise Errors::CommandRunError, stderr unless status == 0
-        @reformatter.reformat(stdout)
+        @reformatter.reformat(cleanup_pkg_names(stdout))
+      end
+
+      private
+
+      def cleanup_pkg_names(sbom_str)
+        data = JSON.parse(sbom_str)
+        component_list = data["components"]
+        component_list ||= []
+        components = component_list.map do |component|
+          group = component["group"]
+          name = component["name"]
+          if group && !name.start_with?(group)
+            component["name"] = group + "/" + name
+          end
+          component
+        end
+        data["components"] = components
+        JSON.dump(data)
       end
 
       def build_command_line
