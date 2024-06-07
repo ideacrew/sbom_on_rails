@@ -5,6 +5,7 @@ require_relative "sbom_on_rails/gem_report"
 require_relative "sbom_on_rails/dpkg"
 require_relative "sbom_on_rails/sbom"
 require_relative "sbom_on_rails/manifest"
+require_relative "sbom_on_rails/grype"
 
 module SbomOnRails
 end
