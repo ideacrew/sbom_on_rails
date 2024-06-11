@@ -36,7 +36,13 @@ module SbomOnRails
                 "ref" => mp
               }
             end
-            out_vuln["affects"] = refs 
+            out_vuln["affects"] = refs
+            out_vuln["tools"] = {
+              "components" => [{
+                "type" => "application",
+                "name" => "grype"
+              }]
+            }
             vuln_list << out_vuln
           end
         end
