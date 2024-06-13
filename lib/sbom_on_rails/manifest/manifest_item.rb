@@ -33,6 +33,8 @@ module SbomOnRails
           @strategy = ItemStrategies::RubyGems.new(@base_path, @properties)
         when "dpkg_list"
           @strategy = ItemStrategies::DpkgList.new(@base_path, @properties)
+        when "dpkg_db"
+          @strategy = ItemStrategies::DpkgDb.new(@base_path, @properties)
         when "custom_sbom"
           @strategy = ItemStrategies::CustomSbom.new(@base_path, @properties)
         when "npm"
