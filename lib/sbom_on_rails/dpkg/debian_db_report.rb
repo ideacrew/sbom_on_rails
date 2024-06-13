@@ -14,7 +14,9 @@ module SbomOnRails
         read_packages = status_files.flat_map do |s_file|
           read_packages_from(s_file)
         end
-        packages = uniq_packages(read_packages)
+        bin_packages = read_packages.map { |pkg| pkg["component"] }.compact
+        src_packages = read_packages.map { |pkg| pkg["source"] }.compact
+        packages = uniq_packages(bin_packages + src_packages)
         data = generate_metadata
         data["components"] = packages
         if packages.any?
@@ -62,6 +64,24 @@ module SbomOnRails
         }
         data["description"] = values["Description"] if values["Description"]
         data
+        comp_stuff = {
+          "component" => data
+        }
+        if values["Source"]
+          src_name = values["Source"]
+          src_version = values["Version"]
+          src_arch = "source"
+          src_purl = "pkg:deb/debian/#{src_name}@#{src_version}"
+          src_bomRef = src_name + "-debian-dpkg-src-" + src_version + src_arch
+          comp_stuff["source"] = {
+            "type" => "application",
+            "name" => src_name,
+            "version" => src_version,
+            "bom-ref" => src_bomRef,
+            "purl" => src_purl
+          }
+        end
+        comp_stuff
       end
 
       def read_packages_from(path)
@@ -92,27 +112,6 @@ module SbomOnRails
           File.join(package_directory, f_name)
         end
         (status_file + status_d_files).uniq
-      end
-
-      def parse_dpkg_list(dpkg_list_output)
-        components = Array.new
-        data_lines.each do |dl|
-          data_set = dl.split("  ").map(&:strip).reject { |item| item == "" }
-          if data_set[0] =~ /ii/
-            name = data_set[1].split(":").first
-            version = data_set[2]
-            bomRef = name + "-debian-dpkg-" + version
-            purl = "pkg:deb/debian/#{name}@#{version}"
-            components << {
-              "type" => "application",
-              "bom-ref" => bomRef,
-              "name" => name,
-              "version" => version,
-              "purl" =>  purl,
-            }
-          end
-        end
-        components
       end
 
       def generate_metadata
