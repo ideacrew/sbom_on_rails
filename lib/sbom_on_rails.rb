@@ -7,6 +7,7 @@ require_relative "sbom_on_rails/sbom"
 require_relative "sbom_on_rails/manifest"
 require_relative "sbom_on_rails/grype"
 require_relative "sbom_on_rails/osv_scanner"
+require_relative "sbom_on_rails/debian"
 
 module SbomOnRails
 end

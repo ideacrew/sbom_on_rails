@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.7'
   s.add_runtime_dependency "bundler"
   s.add_runtime_dependency "gem_report"
+  s.add_runtime_dependency "treetop"
+  s.add_runtime_dependency "nokogiri"
 end

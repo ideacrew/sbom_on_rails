@@ -1,0 +1,77 @@
+grammar SbomOnRailsDebianPackageVersion
+  rule version
+    v_prefix:([0-9]+ ":")? normal_version d_postfix:dash_postfix? d_tilde_pf:deb_tilde_postfix? {
+      def eval(env = {})
+        if v_prefix && v_prefix.elements
+          env[:version_prefix] = v_prefix.elements[0].text_value.to_i
+        end
+        if d_tilde_pf && d_tilde_pf.elements
+          d_tilde_pf.eval(env)
+        end
+        if d_postfix && d_postfix.elements
+           d_postfix.eval(env)
+        end
+        normal_version.eval(env)
+      end
+    }
+  end
+
+  rule normal_version
+    major "." minor patch_ver:("." patch)? {
+      def eval(env = {})
+         major.eval(env)
+         minor.eval(env)
+         if patch_ver && patch_ver.elements
+           patch_ver.elements[1].eval(env)
+         end
+      end
+    }
+  end
+
+  rule dash_postfix
+    "-" [0-9]+ dd_postfix:("." [0-9]+)? {
+      def eval(env = {})
+        env[:dash_postfix_major] = elements[1].text_value.to_i
+        if dd_postfix && dd_postfix.elements
+          env[:dash_postfix_minor] = dd_postfix.elements[1].text_value.to_i
+        end
+      end
+    }
+  end
+
+  rule deb_tilde_postfix
+    ("+deb" / "~deb") [0-9]+ deb_u:("u" [0-9]+)? {
+      def eval(env = {})
+        if deb_u && deb_u.elements
+          env[:deb] = [elements[1].text_value.to_i, deb_u.elements[1].text_value.to_i]
+        else
+          env[:deb] = [elements[1].text_value.to_i]
+        end
+      end
+    }
+  end
+
+  rule major
+    [0-9]+ {
+      def eval(env = {})
+        env[:major] = text_value.to_i
+      end
+    }
+  end
+
+  rule minor
+    [0-9]+ {
+      def eval(env = {})
+       env[:minor] = text_value.to_i
+      end
+    }
+  end
+
+  rule patch
+    [0-9]+ {
+      def eval(env = {})
+        env[:patch] = text_value.to_i
+      end
+    }
+  end
+end
