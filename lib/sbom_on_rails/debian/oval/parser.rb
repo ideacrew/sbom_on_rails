@@ -62,7 +62,11 @@ module SbomOnRails
           end
           test_expression = test_node["comment"]
           raise test_expression.inspect unless test_expression.include?("is earlier than")
-          { "lt" => test_expression.split("DPKG is earlier than").last.strip }
+          if test_expression =~ /DPKG is earlier than 0\Z/
+            { "gt" => "0" } 
+          else
+            { "lt" => test_expression.split("DPKG is earlier than").last.strip }
+          end
         end
       end
     end

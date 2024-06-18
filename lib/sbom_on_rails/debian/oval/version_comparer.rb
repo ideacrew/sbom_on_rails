@@ -7,7 +7,7 @@ module SbomOnRails
         end
         
         GT_PROC = Proc.new do |o_version, ver|
-          o_version < ver
+          o_version > ver
         end
 
         attr_reader :details, :version
@@ -28,7 +28,7 @@ module SbomOnRails
 
         def determine_op(version_op)
           case version_op
-          when :gt
+          when "gt"
             @op = GT_PROC
           else
             @op = LT_PROC
