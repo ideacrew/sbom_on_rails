@@ -71,7 +71,7 @@ module SbomOnRails
           src_name = values["Source"]
           src_version = values["Version"]
           src_arch = "source"
-          src_purl = "pkg:deb/debian/#{src_name}@#{src_version}"
+          src_purl = "pkg:deb/debian/#{src_name}@#{src_version}?arch=source"
           src_bomRef = src_name + "-debian-dpkg-src-" + src_version + src_arch
           comp_stuff["source"] = {
             "type" => "application",

@@ -13,15 +13,42 @@ module SbomOnRails
         def parse
           doc = Nokogiri::XML(File.read(@file_path))
           return nil unless doc
-          doc.xpath("//oval:oval_definitions/oval:definitions/oval:definition", NS).map do |o_def|
+          definitions = doc.xpath("//oval:oval_definitions/oval:definitions/oval:definition", NS).map do |o_def|
             criteria = parse_criteria(o_def)
-            {
+            title = o_def.at_xpath("oval:metadata/oval:title", NS).content
+            id = title.split(/\s+/).first
+            data = {
+              "id" => id,
+              "target_version" => o_def.at_xpath("oval:metadata/oval:affected/oval:platform", NS).content, 
               "title" => o_def.at_xpath("oval:metadata/oval:title", NS).content,
               "description" => o_def.at_xpath("oval:metadata/oval:description", NS).content,
               "product" => parse_product(o_def),
               "criteria" => criteria
-            }  
+            }
+            cves = parse_cves(o_def)
+            if cves.any?
+              data["cves"] = cves
+            end
+            data
           end
+        end
+
+        def parse_cves(def_node)
+          nodes = def_node.xpath("oval:metadata/oval:reference[@source = 'CVE']", NS)
+          return {} unless nodes.any?
+          data = []
+          nodes.each do |node|
+            n = {}
+            if node["ref_id"] && node["ref_url"]
+              n["id"] = node["ref_id"]
+              n["source"] = {
+                "name" => "CVE",
+                "url" => node["ref_url"]
+              }
+            end
+            data << n
+          end
+          data
         end
 
         def parse_product(def_node)
