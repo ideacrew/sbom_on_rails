@@ -23,6 +23,10 @@ module SbomOnRails
 
       def update(reporter = SilentReporter.new)
         existing_jsons = existing_inventory
+        if (!existing_jsons.any?)
+          grab_nvd_cache
+          existing_jsons = existing_inventory
+        end
         reporter.puts("Found #{existing_jsons.count} existing files.")
         missing_jsons = missing_inventory(existing_jsons)
         reporter.puts("Found #{missing_jsons.count} missing files.")
@@ -40,6 +44,9 @@ module SbomOnRails
       end
 
       protected
+
+      def grab_nvd_cache
+      end
 
       def download_updated(downloadable_jsons)
         downloadable_jsons.each do |dj|
