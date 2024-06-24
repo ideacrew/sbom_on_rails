@@ -1,6 +1,7 @@
 require 'net/http'
 require 'time'
 require 'zip'
+require 'open-uri'
 
 module SbomOnRails
   module Nvd
@@ -17,6 +18,8 @@ module SbomOnRails
       # I don't care about files I grabed < 10 minutes ago.
       NVD_OUTDATED_FUZZ = 600
 
+      NVD_CACHE_URL = "https://github.com/ideacrew/sbom_on_rails/releases/download/NVD/nvd_cache.zip"
+
       def initialize(path)
         @path = path
       end
@@ -24,7 +27,7 @@ module SbomOnRails
       def update(reporter = SilentReporter.new)
         existing_jsons = existing_inventory
         if (!existing_jsons.any?)
-          grab_nvd_cache
+          grab_nvd_cache(reporter)
           existing_jsons = existing_inventory
         end
         reporter.puts("Found #{existing_jsons.count} existing files.")
@@ -45,7 +48,26 @@ module SbomOnRails
 
       protected
 
-      def grab_nvd_cache
+      def grab_nvd_cache(reporter)
+        reporter.print("Database is empty, grabbing a cached version...")
+        cache_uri = URI(NVD_CACHE_URL)
+        cache_download_path = File.join(@path, "nvd_cache.zip")
+        if File.exists?(cache_download_path)
+          FileUtils.rm_f(cache_download_path)
+        end
+        cache_uri.open do |r|
+          File.open(cache_download_path, "wb") do |f|
+            f.write(r.read)
+          end
+        end
+        Zip::File.open(cache_download_path) do |zf|
+          zf.each do |entry|
+            entry.extract(File.join(@path, entry.name))
+          end
+        end
+        FileUtils.rm_f(cache_download_path)
+        cache_data = nil
+        reporter.puts("DONE!")
       end
 
       def download_updated(downloadable_jsons)
