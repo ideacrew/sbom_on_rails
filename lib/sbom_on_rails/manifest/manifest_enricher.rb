@@ -4,6 +4,8 @@ module SbomOnRails
   module Manifest
     class ManifestEnricher
       ALLOWED_TYPES = [
+        "grype",
+        "osv_scanner",
         "oval_xml",
         "nvd_impact",
         "nvd_db_update"
@@ -26,6 +28,12 @@ module SbomOnRails
       def select_strategy(properties)
         @type = properties["type"]
         case @type
+        when "grype"
+          @strategy = EnricherStrategies::Grype.new(@base_path, @properties)
+        when "osv_scanner"
+          @strategy = EnricherStrategies::OsvScanner.new(@base_path, @properties)
+        when "oval_certainty_evaluator"
+          @strategy = EnricherStrategies::OvalCertaintyEvaluator.new(@base_path, @properties)
         when "oval_xml"
           @strategy = EnricherStrategies::OvalXml.new(@base_path, @properties)
         when "nvd_impact"
