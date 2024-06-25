@@ -27,7 +27,7 @@ module SbomOnRails
 
       def verify_grype_location
         found_bin = SbomOnRails::Utils::Whicher.find("grype")
-        raise Errors::NoExeError, "could not locate grype" unless found_bin
+        raise Errors::NoExeFoundError, "could not locate grype" unless found_bin
       end
     end
   end
