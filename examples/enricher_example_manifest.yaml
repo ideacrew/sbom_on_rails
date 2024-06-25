@@ -1,0 +1,10 @@
+items:
+  - type: custom_sbom
+    sbom_file: ../osv_enriched.json
+enrichers:
+  - type: oval_xml
+    xml_file: ../oval-definitions-bullseye.xml
+  - type: nvd_db_update
+    nvd_db: ../nvd_db
+  - type: nvd_impact
+    nvd_db: ../nvd_db

@@ -14,12 +14,12 @@ module SbomOnRails
           vulns.each do |vuln|
             ratings = vuln["ratings"]
             if unrated?(ratings)
-            id = vuln["id"]
-            nvd_record = @db[id]
-            if nvd_record
-              extracted_rating = extract_rating(nvd_record)
-              vuln["ratings"] = [extracted_rating] if extracted_rating
-            end
+              id = vuln["id"]
+              nvd_record = @db[id]
+              if nvd_record
+                extracted_rating = extract_rating(nvd_record)
+                vuln["ratings"] = [extracted_rating] if extracted_rating
+              end
             end
           end
         end

@@ -40,7 +40,7 @@ module SbomOnRails
         when "npm"
           @strategy = ItemStrategies::Npm.new(@base_path, @properties)
         else
-          raise Errors::InvalidItemTypeError, type_value
+          raise Errors::InvalidItemTypeError, @type
         end
       end
     end
