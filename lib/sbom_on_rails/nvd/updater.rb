@@ -52,7 +52,7 @@ module SbomOnRails
         reporter.print("Database is empty, grabbing a cached version...")
         cache_uri = URI(NVD_CACHE_URL)
         cache_download_path = File.join(@path, "nvd_cache.zip")
-        if File.exists?(cache_download_path)
+        if File.exist?(cache_download_path)
           FileUtils.rm_f(cache_download_path)
         end
         cache_uri.open do |r|
@@ -75,7 +75,7 @@ module SbomOnRails
           zip_name = dj + ".zip"
           download_path = get_zip(zip_name)
           unzip_path = File.join(@path, dj)
-          if File.exists?(unzip_path)
+          if File.exist?(unzip_path)
             FileUtils.rm_f(unzip_path)
           end
           Zip::File.open(download_path) do |zf|
@@ -91,7 +91,7 @@ module SbomOnRails
 
       def get_zip(zip_name)
         download_path = File.join(@path, zip_name)
-        if File.exists?(download_path)
+        if File.exist?(download_path)
           FileUtils.rm_f(download_path)
         end
         zip_uri = URI(NVD_SOURCE_URL + zip_name)
