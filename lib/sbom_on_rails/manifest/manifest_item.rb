@@ -35,6 +35,8 @@ module SbomOnRails
           @strategy = ItemStrategies::DpkgList.new(@base_path, @properties)
         when "dpkg_db"
           @strategy = ItemStrategies::DpkgDb.new(@base_path, @properties)
+        when "apk_db"
+          @strategy = ItemStrategies::ApkDb.new(@base_path, @properties)
         when "custom_sbom"
           @strategy = ItemStrategies::CustomSbom.new(@base_path, @properties)
         when "npm"
