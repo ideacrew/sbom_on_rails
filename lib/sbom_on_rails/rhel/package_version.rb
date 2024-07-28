@@ -37,11 +37,21 @@ module SbomOnRails
           remaining_to_parse = version_str
           @release = parse_release(release_str)
         end
-        v_result = @version_parser.parse(remaining_to_parse)
-        raise StandardError, "Invalid version string: #{@version}, #{remaining_to_parse}" unless v_result
-        v_vals = {}
-        v_result.eval(v_vals)
-        @versions = v_vals[:versions]
+        @versions = parse_versions(remaining_to_parse)
+      end
+
+      def parse_versions(version_str)
+        rest = version_str
+        versions = []
+        while rest && rest.length > 0
+          v_result = @version_parser.parse(rest)
+          raise StandardError, "Invalid version string: #{@version}, #{rest}" unless v_result
+          v_vals = {}
+          v_result.eval(v_vals)
+          versions << v_vals[:versions]
+          rest = v_vals[:rest]
+        end
+        versions.flatten
       end
 
       def parse_release(release_str)
@@ -85,8 +95,9 @@ module SbomOnRails
         other_release = other.release
         index_max = [@release.length, other_release.length].max - 1
         (0..index_max).to_a.each do |i|
-          val = @release[i]
+          val = release[i]
           other_val = other_release[i]
+          raise @release.inspect unless val
           return -1 unless val
           return 1 unless other_val
           comp_val = val <=> other_val

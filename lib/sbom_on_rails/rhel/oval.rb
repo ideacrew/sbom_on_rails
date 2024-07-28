@@ -5,6 +5,7 @@ require_relative "oval/rpm_info_state"
 require_relative "oval/rpm_info_test"
 require_relative "oval/database"
 require_relative "oval/version_comparison"
+require_relative "oval/enricher"
 
 module SbomOnRails
   module Rhel

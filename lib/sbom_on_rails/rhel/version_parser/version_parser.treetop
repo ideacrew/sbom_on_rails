@@ -1,12 +1,20 @@
 grammar SbomOnRailsRhelPackageVersion
 
   rule recurse_version
-    fv:(standard_version / deb_uwu / dash_suffix / name_dotted_version / named_version / other_delimiter / dumbdash_version / weirddebianversion / majorandtag / another_number) r:(rest)? {
+    fv:(standard_version / deb_uwu / dash_suffix / name_dotted_version / named_version / other_delimiter / dumbdash_version / weirddebianversion / majorandtag / another_number / under_number) r:(rest)? {
       def eval(env = {})
         fv.eval(env)
         if r && r.elements
           r.eval(env)
         end
+      end
+    }
+  end
+
+  rule under_number
+    "_" "v"? [0-9]+ {
+      def eval(env = {})
+        env[:versions] = [elements.last.text_value.to_i]
       end
     }
   end

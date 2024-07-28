@@ -14,7 +14,7 @@ grammar SbomOnRailsRhelPackageRelease
   rule under_number
     "_" [0-9]+ {
       def eval(env = {})
-        env[:versions] = [elements[1].text_value.to_i]
+        env[:versions] = [elements.last.text_value.to_i]
       end
     }
   end
@@ -22,6 +22,7 @@ grammar SbomOnRailsRhelPackageRelease
   rule other_delimiter
    ("+" / "~" / "." / "-") { 
     def eval(env = {})
+      env[:versions] = []
     end
    }
   end
