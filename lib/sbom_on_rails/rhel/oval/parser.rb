@@ -9,6 +9,21 @@ module SbomOnRails
           @file_path = file_path
         end
 
+        def comp(other)
+          other_versions = other.versions
+          index_max = [@versions.length, other_versions.length].max - 1
+          (0..index_max).to_a.each do |i|
+            val = @versions[i]
+            other_val = other_versions[i]
+            return -1 unless val
+            return 1 unless other_val
+            comp_val = val <=> other_val
+            raise ArgumentError, [val, other_val] if comp_val.nil?
+            return comp_val if comp_val != 0
+          end
+          0
+        end
+
         def parse
           doc = Nokogiri::XML(File.read(@file_path))
           return nil unless doc

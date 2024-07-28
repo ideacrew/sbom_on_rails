@@ -15,10 +15,6 @@ describe SbomOnRails::Rhel::Oval::Parser, "given a RHEL oval xml" do
     testless_definitions = parse_result.select do |pr|
       pr.tests.empty?
     end
-    node_definitions = parse_result.select do |pr|
-      pr.id == "RHEA-2023:6529"
-    end
-    raise node_definitions.inspect
     expect(testless_definitions).to be_empty
   end
 end

@@ -20,6 +20,16 @@ module SbomOnRails
               @name = rpm_object
               @version = rpm_state
             end
+          elsif object_node && rpm_info_test_node["comment"] && rpm_info_test_node["comment"].include?("is installed")
+            object_id = object_node.attr("object_ref")
+            rpm_object = rpm_object_hash[object_id]
+            if rpm_object
+              @name = rpm_object
+              @version = {
+                :comp => :gte,
+                :version => ::SbomOnRails::Rhel::PackageVersion.new("0")
+              }
+            end
           end
         end
       end
