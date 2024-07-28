@@ -1,0 +1,232 @@
+grammar SbomOnRailsRhelPackageRelease
+
+  rule recurse_version
+    fv:(standard_version / deb_uwu / dash_suffix / name_dotted_version / named_version / other_delimiter / dumbdash_version / weirddebianversion / majorandtag / another_number) r:(rest)? {
+      def eval(env = {})
+        fv.eval(env)
+        if r && r.elements
+          r.eval(env)
+        end
+      end
+    }
+  end
+
+  rule other_delimiter
+   ("+" / "~" / "." / "-") { 
+    def eval(env = {})
+    end
+   }
+  end
+
+  rule standard_version
+    sv:(four_point_version / patched_three_version / openssl_version / three_point_version / patched_two_version / two_point_version) {
+      def eval(env = {})
+        sv.eval(env)
+      end
+    }
+  end
+
+  rule patched_three_version
+    [0-9]+ "." [0-9]+ "." [0-9]+ "p" [0-9]+ {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << elements[4].text_value.to_i
+        version_val << 0
+        version_val << elements[6].text_value.to_i
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule dumbdash_version
+    [0-9]+ "-" [0-9]+ dsm:("." [0-9]+)? {
+      def eval(env = {})
+        version_val = [elements[0].text_value.to_i, 0, 0, elements[2].text_value.to_i]
+        if dsm && dsm.elements
+          version_val[1] = dsm.elements[1].text_value.to_i
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule patched_two_version
+    [0-9]+ "." [0-9]+ "p" [0-9]+ {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << 0
+        version_val << 0
+        version_val << elements[4].text_value.to_i
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule four_point_version
+    [0-9]+ "." [0-9]+ "." [0-9]+ "." [0-9]+ {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << elements[4].text_value.to_i
+        version_val << elements[6].text_value.to_i
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule three_point_version
+    [0-9]+ "." [0-9]+ "." [0-9]+ ol:([a-z])? {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << elements[4].text_value.to_i
+        if ol && ol.elements
+          version_val << elements[5].text_value
+        end
+        version_val << 0
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule two_point_version
+    [0-9]+ "." [0-9]+ {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << 0
+        version_val << 0
+        version_val << 0
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule openssl_version
+    [0-9]+ "." [0-9]+ "." [0-9]+ [a-z] (![0-9]) {
+      def eval(env = {})
+        idx = [""] + ('a'..'z').to_a
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[2].text_value.to_i
+        version_val << elements[4].text_value.to_i
+        version_val << idx.index(elements[5].text_value)
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule dash_suffix
+    ("-" / "+") [0-9]+ ossl_letter:([a-z])? dsm:("." [0-9]+)? dsm2:("." [0-9]+)? {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[1].text_value.to_i
+        if ossl_letter && ossl_letter.elements
+          version_val << ossl_letter.elements[0].text_value
+        end
+        if dsm && dsm.elements
+          version_val << dsm.elements[1].text_value.to_i
+        end
+        if dsm2 && dsm2.elements
+          version_val << dsm2.elements[1].text_value.to_i
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule deb_uwu
+    ("+deb" / "~deb") [0-9]+ dm:("u" [0-9]+)? {
+      def eval(env = {})
+        version_val = [elements[1].text_value.to_i]
+        if dm && dm.elements
+          version_val << [dm.elements[1].text_value.to_i]
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule named_version
+    [A-Za-z]+ vn:([0-9]+)? dm:("." [0-9]+)? dp:("." [0-9]+)? {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value
+        if vn && vn.elements
+          version_val << vn.elements[0].text_value.to_i
+        end
+        if dm && dm.elements
+          version_val << dm.elements[1].text_value.to_i
+        end
+        if dp && dp.elements
+          version_val << dp.elements[1].text_value.to_i
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule name_dotted_version
+    [A-Za-z]+ "." [0-9]+ dm:("." [0-9]+)? dp:("." [0-9]+)? {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value
+        version_val << elements[2].text_value.to_i
+        if dm && dm.elements
+          version_val << dm.elements[1].text_value.to_i
+        end
+        if dp && dp.elements
+          version_val << dp.elements[1].text_value.to_i
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule weirddebianversion
+    [0-9]+ [A-Za-z]+ {
+      def eval(env = {})
+        version_val = []
+        version_val << elements[0].text_value.to_i
+        version_val << elements[1].text_value.to_i
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule majorandtag
+    [0-9]+ "." [A-Za-z]+ tag:([0-9]+)? {
+      def eval(env = {})
+        version_val = [elements[0].text_value.to_i, 0, 0, 0, 0]
+        version_val << elements[2].text_value
+        if tag && tag.elements
+          version_val << tag.text_value.to_i
+        end
+        env[:versions] = version_val
+      end
+    }
+  end
+
+  rule another_number
+    [0-9]+ {
+      def eval(env = {})
+        env[:versions] = text_value.to_i
+      end
+    }
+  end
+
+  rule rest
+    .+ {
+      def eval(env = {})
+        env[:rest] = text_value
+      end
+    }
+  end
+end
