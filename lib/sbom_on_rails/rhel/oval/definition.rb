@@ -6,9 +6,10 @@ module SbomOnRails
       # An oval item definition
       class Definition
         attr_reader :id, :title, :description, :tests, :references,
-                    :severity, :cves
+                    :severity, :cves, :uniq_id
 
         def initialize(def_node, rpm_info_test_hash)
+          @uniq_id = def_node.attr("id")
           @id = parse_id(def_node)
           @title = def_node.at_xpath("oval:metadata/oval:title", NS).content
           @description = def_node.at_xpath("oval:metadata/oval:description", NS).content

@@ -3,6 +3,8 @@ require_relative "oval/definition"
 require_relative "oval/rpm_info_object"
 require_relative "oval/rpm_info_state"
 require_relative "oval/rpm_info_test"
+require_relative "oval/database"
+require_relative "oval/version_comparison"
 
 module SbomOnRails
   module Rhel

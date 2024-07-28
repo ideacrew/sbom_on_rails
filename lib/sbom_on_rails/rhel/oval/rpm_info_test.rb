@@ -27,7 +27,7 @@ module SbomOnRails
               @name = rpm_object
               @version = {
                 :comp => :gte,
-                :version => ::SbomOnRails::Rhel::PackageVersion.new("0")
+                :version => ::SbomOnRails::Rhel::PackageVersion.new("0.0")
               }
             end
           end
