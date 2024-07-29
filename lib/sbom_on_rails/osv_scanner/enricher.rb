@@ -28,7 +28,11 @@ module SbomOnRails
         comp_list.each do |comp|
           next unless comp["purl"]
           comp_es = map_component_ecosystem(comp["purl"])
-          comp_lookup[[comp["name"], comp["version"], comp_es]] = comp
+          comp_name = comp["name"]
+          if comp["group"]
+            comp_name = comp["group"] + ":" + comp["name"]
+          end
+          comp_lookup[[comp_name, comp["version"], comp_es]] = comp
         end
         comp_lookup
       end
@@ -42,6 +46,8 @@ module SbomOnRails
           "Debian"
         elsif purl.start_with?("pkg:apk")
           "Alpine"
+        elsif purl.start_with?("pkg:maven")
+          "Maven"
         else
           nil
         end
