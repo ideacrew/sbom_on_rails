@@ -6,6 +6,7 @@ sha = "8873b9b77132afe6b837042e89e6e3c5dcc8306d"
 component_def = SbomOnRails::Sbom::ComponentDefinition.new(
   project_name,
   sha,
+  nil,
   { github: "https://github.com/ideacrew/enroll" }
 )
 

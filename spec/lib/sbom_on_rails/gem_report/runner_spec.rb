@@ -30,7 +30,8 @@ describe SbomOnRails::GemReport::Runner, "given:
     let(:component_def) do
       SbomOnRails::Sbom::ComponentDefinition.new(
         project_name,
-        sha
+        sha,
+        nil
       )
     end
 

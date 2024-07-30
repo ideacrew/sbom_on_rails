@@ -6,6 +6,7 @@ describe SbomOnRails::Rhel::YumPackageReport, "given a simple package output" do
     SbomOnRails::Sbom::ComponentDefinition.new(
       "keycloak",
       "907906065139fb667c86542b4793e5df8a3be7fe",
+      nil,
       { github: "https://github.com/ideacrew/something" }
     )
   end

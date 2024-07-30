@@ -1,17 +1,25 @@
 module SbomOnRails
   module Sbom
     class ComponentDefinition
-      attr_reader :project_name, :sha
+      attr_reader :project_name, :sha, :version
 
-      def initialize(name, s, options = {})
+      def initialize(name, s, vers, options = {})
         @project_name = name
         @sha = s
+        @version = vers
         parse_options(options)
       end
 
       def bom_ref
         @bom_ref ||= begin
-          @project_name + "-" + @sha
+          v_string = @project_name
+          if @sha
+            v_string = v_string + "-" + @sha
+          end
+          if @version
+            v_string = v_string + "-" + @version
+          end
+          v_string
         end
       end
 
@@ -19,14 +27,19 @@ module SbomOnRails
         data = {
           "type" => "application",
           "name" => @project_name,
-          "bom-ref" => bom_ref,
-          "hashes" => [
+          "bom-ref" => bom_ref
+        }
+        if @sha
+          data["hashes"] = [
             {
               "alg" => "SHA-1",
               "content" => @sha
             }
           ]
-        }
+        end
+        if @version
+          data["version"] = version
+        end
         if @github_url
           data["externalReferences"] ||= []
           data["externalReferences"] << {

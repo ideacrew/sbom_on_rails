@@ -12,7 +12,8 @@ describe SbomOnRails::Rhel::Oval::Enricher, "given a RHEL oval xml and an SBOM" 
   let(:component_definition) do
     SbomOnRails::Sbom::ComponentDefinition.new(
       "keycloak",
-      "907906065139fb667c86542b4793e5df8a3be7fe",
+      nil,
+      "25.0.2",
       { github: "https://github.com/ideacrew/something" }
     )
   end

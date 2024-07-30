@@ -33,8 +33,11 @@ module SbomOnRails
         components = component_list.map do |component|
           group = component["group"]
           name = component["name"]
-          if group && !name.start_with?(group)
-            component["name"] = group + "/" + name
+          if group
+            if !name.start_with?(group)
+              component["name"] = group + "/" + name
+            end
+            component.delete("group")
           end
           component
         end
