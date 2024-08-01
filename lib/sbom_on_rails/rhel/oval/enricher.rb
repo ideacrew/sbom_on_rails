@@ -47,7 +47,13 @@ module SbomOnRails
                     },
                     "severity" => v_def.severity
                   }
-                ]
+                ],
+                "tools" => {
+                  "components" => [
+                    "type" => "file",
+                    "name" => "OVAL - RHEL"
+                  ]
+                }
               }
               if v_def.references
                 vuln["references"] = v_def.references
