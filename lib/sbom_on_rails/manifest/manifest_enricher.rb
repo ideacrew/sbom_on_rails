@@ -40,6 +40,8 @@ module SbomOnRails
           @strategy = EnricherStrategies::NvdImpact.new(@base_path, @properties)
         when "nvd_db_update"
           @strategy = EnricherStrategies::NvdDbUpdate.new(@base_path, @properties)
+        when "rhel_oval_xml"
+          @strategy = EnricherStrategies::RhelOvalXml.new(@base_path, @properties)
         else
           raise Errors::InvalidEnricherTypeError, @type
         end
