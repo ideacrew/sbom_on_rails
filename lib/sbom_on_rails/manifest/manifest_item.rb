@@ -41,6 +41,8 @@ module SbomOnRails
           @strategy = ItemStrategies::CustomSbom.new(@base_path, @properties)
         when "npm"
           @strategy = ItemStrategies::Npm.new(@base_path, @properties)
+        when "yum_package_list"
+          @strategy = ItemStrategies::YumPackageList.new(@base_path, @properties)
         else
           raise Errors::InvalidItemTypeError, @type
         end
