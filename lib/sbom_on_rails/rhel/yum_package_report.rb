@@ -5,9 +5,6 @@ module SbomOnRails
     # File comes out of yum using:
     #   `yum rq --installed --queryformat %{name}\\t%{epoch}:%{version}-%{release}\\t%{arch}`
     class YumPackageReport
-
-      attr_reader :project_name, :sha
-
       def initialize(component_def)
         @component_definition = component_def
       end

@@ -1,0 +1,2537 @@
+{
+  "version": "5.9.0",
+  "info": "Default gems are part of a Ruby installation, can always be required directly and cannot be removed.",
+  "gems": [
+    {
+      "gem": "abbrev",
+      "native": false,
+      "autoRequire": false,
+      "description": "Finds the shortest unique abbreviation amongst many strings",
+      "mriSourcePath": "lib/abbrev.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/abbrev",
+      "rubygemsLink": "https://rubygems.org/gems/abbrev",
+      "rdocLink": "https://rubyapi.org/o/abbrev",
+      "maintainer": "Akinori MUSHA (knu)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "0.1.2",
+        "3.2": "0.1.1",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "base64",
+      "native": false,
+      "autoRequire": false,
+      "description": "Encodes and decodes strings to a [Base64](https://en.wikipedia.org/wiki/Base64) representation. Implemented as a small wrapper around [String#unpack](https://idiosyncratic-ruby.com/4-what-the-pack.html)",
+      "mriSourcePath": "lib/base64.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/base64",
+      "rubygemsLink": "https://rubygems.org/gems/base64",
+      "rdocLink": "https://rubyapi.org/o/base64",
+      "maintainer": "Yusuke Endoh (mame)",
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "Array#pack('m') / String#unpack('m')": "https://idiosyncratic-ruby.com/4-what-the-pack.html#m--base64-encoding-rfc-2045"
+      },
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.1",
+        "3.1": "0.1.1",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "benchmark",
+      "native": false,
+      "autoRequire": false,
+      "description": "Benchmark utility: Measures and reports the time used to execute code",
+      "mriSourcePath": "lib/benchmark.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/benchmark",
+      "rubygemsLink": "https://rubygems.org/gems/benchmark",
+      "rdocLink": "https://rubyapi.org/o/benchmark",
+      "maintainer": null,
+      "alternatives": {
+        "benchmark-ips": "https://github.com/evanphx/benchmark-ips",
+        "benchmark-driver": "https://github.com/benchmark-driver/benchmark-driver"
+      },
+      "versions": {
+        "3.3": "0.3.0",
+        "3.2": "0.2.1",
+        "3.1": "0.2.0",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "bigdecimal",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for arbitrary-precision floating point decimal arithmetic",
+      "mriSourcePath": "ext/bigdecimal",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/bigdecimal.rb",
+        "lib/ruby/stdlib/bigdecimal",
+        "core/src/main/java/org/jruby/ext/bigdecimal"
+      ],
+      "sourceRepository": "https://github.com/ruby/bigdecimal",
+      "rubygemsLink": "https://rubygems.org/gems/bigdecimal",
+      "rdocLink": "https://rubyapi.org/o/bigdecimal",
+      "maintainer": "Kenta Murata (mrkn)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "3.1.5",
+        "3.2": "3.1.3",
+        "3.1": "3.1.1",
+        "3.0": "3.0.0",
+        "2.7": "2.0.0",
+        "2.6": "1.4.1",
+        "2.5": "1.3.4",
+        "2.4": "1.3.2",
+        "2.4.3": "1.3.0",
+        "2.4.2": "1.3.0",
+        "2.4.1": "1.3.0",
+        "2.4.0": "1.3.0",
+        "2.3": "1.2.8",
+        "2.2": "1.2.6"
+      }
+    },
+    {
+      "gem": "bundler",
+      "native": false,
+      "autoRequire": false,
+      "description": "[Bundler](https://bundler.io) is the local package manager for Ruby applications",
+      "mriSourcePath": "lib/bundler",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/rubygems/rubygems/tree/master/bundler",
+      "rubygemsLink": "https://rubygems.org/gems/bundler",
+      "rdocLink": "https://www.rubydoc.info/gems/bundler",
+      "maintainer": "Hiroshi SHIBATA (hsbt)",
+      "versions": {
+        "3.3":   "2.5.11",
+        "3.3.2": "2.5.9",
+        "3.3.1": "2.5.9",
+        "3.3.0": "2.5.3",
+
+        "3.2":   "2.4.19",
+        "3.2.2": "2.4.10",
+        "3.2.1": "2.4.6",
+        "3.2.0": "2.4.1",
+
+        "3.1":   "2.3.27",
+        "3.1.4": "2.3.26",
+        "3.1.3": "2.3.26",
+        "3.1.2": "2.3.7",
+        "3.1.1": "2.3.7",
+        "3.1.0": "2.3.3",
+
+        "3.0":   "2.2.33",
+        "3.0.3": "2.2.32",
+        "3.0.2": "2.2.22",
+        "3.0.1": "2.2.15",
+        "3.0.0": "2.2.3",
+
+        "2.7":   "2.1.4",
+        "2.7.0": "2.1.2",
+
+        "2.6":   "1.17.2"
+      }
+    },
+    {
+      "gem": "cgi",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for CGI ([Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface))",
+      "mriSourcePath": ["lib/cgi.rb", "lib/cgi", "ext/cgi"],
+      "jrubySourcePath": [
+        true,
+        "core/src/main/java/org/jruby/ext/cgi/escape/CGIEscape.java"
+      ],
+      "sourceRepository": "https://github.com/ruby/cgi",
+      "rubygemsLink": "https://rubygems.org/gems/cgi",
+      "rdocLink": "https://rubyapi.org/o/cgi",
+      "maintainer": ["Nobuyoshi Nakada (nobu) — native code"],
+      "notes": "Only the escape utilities are implemented as native extension.",
+      "alternatives": {
+        "rack": "https://github.com/rack/rack"
+      },
+      "versions": {
+        "3.3":   "0.4.1",
+
+        "3.2":   "0.3.6",
+
+        "3.1":   "0.3.6",
+        "3.1.4": "0.3.5",
+        "3.1.3": "0.3.5",
+        "3.1.2": "0.3.1",
+        "3.1.1": "0.3.1",
+        "3.1.0": "0.3.1",
+
+        "3.0":   "0.2.2",
+        "3.0.4": "0.2.1",
+        "3.0.3": "0.2.1",
+        "3.0.2": "0.2.0",
+        "3.0.1": "0.2.0",
+        "3.0.0": "0.2.0",
+
+        "2.7":   "0.1.0.2",
+        "2.7.6": "0.1.0.1",
+        "2.7.5": "0.1.0.1",
+        "2.7.4": "0.1.0",
+        "2.7.3": "0.1.0",
+        "2.7.2": "0.1.0",
+        "2.7.1": "0.1.0",
+        "2.7.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "cmath",
+      "native": false,
+      "autoRequire": false,
+      "description": "Trigonometric and transcendental functions for complex numbers",
+      "mriSourcePath": "lib/cmath.rb",
+      "sourceRepository": "https://github.com/ruby/cmath",
+      "rubygemsLink": "https://rubygems.org/gems/cmath",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/cmath/rdoc/CMath.html",
+      "removed": true,
+      "versions": {
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "csv",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for CSV ([Comma-separated Values](https://en.wikipedia.org/wiki/Comma-separated_values))",
+      "mriSourcePath": ["lib/csv.rb", "lib/csv"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/csv",
+      "rubygemsLink": "https://rubygems.org/gems/csv",
+      "rdocLink": "https://rubyapi.org/o/csv",
+      "maintainer": ["Kenta Murata (mrkn)", "Kouhei Sutou (kou)"],
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "smarter_csv": "https://github.com/tilo/smarter_csv"
+      },
+      "versions": {
+        "3.3": "3.2.8",
+
+        "3.2": "3.2.6",
+
+        "3.1": "3.2.5",
+        "3.1.2": "3.2.2",
+        "3.1.1": "3.2.2",
+        "3.1.0": "3.2.2",
+
+        "3.0": "3.1.9",
+
+        "2.7": "3.1.2",
+
+        "2.6": "3.0.9",
+        "2.6.2": "3.0.4",
+        "2.6.1": "3.0.4",
+        "2.6.0": "3.0.2",
+
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "date",
+      "native": true,
+      "autoRequire": false,
+      "description": "The [Date](https://rubyapi.org/o/date) and [DateTime](https://rubyapi.org/o/datetime) classes",
+      "mriSourcePath": "ext/date",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/date.rb",
+        "lib/ruby/stdlib/date",
+        "core/src/main/java/org/jruby/ext/date"
+      ],
+      "sourceRepository": "https://github.com/ruby/date",
+      "rubygemsLink": "https://rubygems.org/gems/date",
+      "rdocLink": [
+        "https://rubyapi.org/o/date",
+        "https://rubyapi.org/o/datetime"
+      ],
+      "maintainer": null,
+      "versions": {
+        "3.3": "3.3.4",
+
+        "3.2": "3.3.3",
+
+        "3.1": "3.2.2",
+
+        "3.0": "3.1.3",
+        "3.0.2": "3.1.0",
+        "3.0.1": "3.1.0",
+        "3.0.0": "3.1.0",
+
+        "2.7": "3.0.3",
+        "2.7.4": "3.0.0",
+        "2.7.3": "3.0.0",
+        "2.7.2": "3.0.0",
+        "2.7.1": "3.0.0",
+        "2.7.0": "3.0.0",
+
+        "2.6": "2.0.3",
+        "2.6.9": "2.0.2",
+        "2.6.8": "2.0.0",
+        "2.6.7": "2.0.0",
+        "2.6.6": "2.0.0",
+        "2.6.5": "2.0.0",
+        "2.6.4": "2.0.0",
+        "2.6.3": "2.0.0",
+        "2.6.2": "2.0.0",
+        "2.6.1": "2.0.0",
+        "2.6.0": "1.0.0",
+
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "dbm",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for [DBM databases](https://en.wikipedia.org/wiki/DBM_(computing))",
+      "mriSourcePath": "ext/dbm",
+      "sourceRepository": "https://github.com/ruby/dbm",
+      "rubygemsLink": "https://rubygems.org/gems/dbm",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/dbm/rdoc/DBM.html",
+      "removed": true,
+      "versions": {
+        "3.0": "1.1.0",
+        "2.7": "1.1.0",
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "debug",
+      "native": false,
+      "autoRequire": false,
+      "description": "Command-line [debugger](https://en.wikipedia.org/wiki/Debugger)",
+      "mriSourcePath": "lib/debug.rb",
+      "sourceRepository": null,
+      "rubygemsLink": null,
+      "rdocLink": "https://ruby-doc.org/stdlib/libdoc-3.0.2/debug/rdoc/DEBUGGER__.html",
+      "notes": "Replaced by a new debugger library with the same name",
+      "removed": true,
+      "versions": {
+        "3.0": "0.2.1",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "delegate",
+      "native": false,
+      "autoRequire": false,
+      "description": "Provides three ways to [delegate](https://en.wikipedia.org/wiki/Delegation_pattern) method calls",
+      "mriSourcePath": "lib/delegate.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/delegate",
+      "rubygemsLink": "https://rubygems.org/gems/delegate",
+      "rdocLink": "https://rubyapi.org/o/delegator",
+      "maintainer": null,
+      "alternatives": {
+        "forwardable": "https://stdgems.org/forwardable/"
+      },
+      "versions": {
+        "3.3": "0.3.1",
+        "3.2": "0.3.0",
+        "3.1": "0.2.0",
+        "3.0": "0.2.0",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "did_you_mean",
+      "native": false,
+      "autoRequire": true,
+      "description": "Patches error messages to suggest correct spelling of methods/classes/variables",
+      "mriSourcePath": ["lib/did_you_mean.rb", "lib/did_you_mean"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/did_you_mean",
+      "rubygemsLink": "https://rubygems.org/gems/did_you_mean",
+      "rdocLink": "https://rubyapi.org/o/didyoumean",
+      "maintainer": "Yuki Nishijima (yuki24)",
+      "notes": "- You can [prevent Ruby from loading this default gem](https://idiosyncratic-ruby.com/71-nothing-to-disable.html) with `$ ruby --disable-did_you_mean`",
+      "versions": {
+        "3.3": "1.6.3",
+        "3.2": "1.6.3",
+        "3.1": "1.6.1",
+        "3.0": "1.5.0",
+        "2.7": "1.4.0"
+      }
+    },
+    {
+      "gem": "digest",
+      "native": true,
+      "autoRequire": false,
+      "description": "Provides common [hash functions](https://en.wikipedia.org/wiki/Hash_function) like MD5, SHA1, SHA2, or RIPEMD-160",
+      "mriSourcePath": "ext/digest",
+      "jrubySourcePath": [true, "core/src/main/java/org/jruby/ext/digest"],
+      "sourceRepository": "https://github.com/ruby/digest",
+      "rubygemsLink": "https://rubygems.org/gems/digest",
+      "rdocLink": "https://rubyapi.org/o/digest",
+      "maintainer": "Akinori MUSHA (knu)",
+      "alternatives": {
+        "OpenSSL::Digest": "https://ruby-doc.org/stdlib/libdoc/openssl/rdoc/OpenSSL/Digest.html"
+      },
+      "versions": {
+        "3.3": "3.1.1",
+        "3.2": "3.1.1",
+        "3.1": "3.1.0",
+        "3.0": "3.0.0"
+      }
+    },
+    {
+      "gem": "drb",
+      "native": false,
+      "autoRequire": false,
+      "description": "Distributed object system for Ruby",
+      "mriSourcePath": ["lib/drb.rb", "lib/drb"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/drb",
+      "rubygemsLink": "https://rubygems.org/gems/drb",
+      "rdocLink": "https://rubyapi.org/o/drb",
+      "maintainer": "Masatoshi SEKI (seki)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "2.2.0",
+
+        "3.2": "2.1.1",
+
+        "3.1": "2.1.0",
+
+        "3.0": "2.0.5",
+        "3.0.2": "2.0.4",
+        "3.0.1": "2.0.4",
+        "3.0.0": "2.0.4"
+      }
+    },
+    {
+      "gem": "e2mmap",
+      "native": false,
+      "autoRequire": false,
+      "description": "Abstraction around exception handling",
+      "mriSourcePath": ["lib/e2mmap.rb", "lib/e2mmap"],
+      "sourceRepository": "https://github.com/ruby/e2mmap",
+      "rubygemsLink": "https://rubygems.org/gems/e2mmap",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/e2mmap/rdoc/Exception2MessageMapper.html",
+      "removed": true,
+      "versions": {
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "english",
+      "native": false,
+      "autoRequire": false,
+      "description": "[Readable aliases for special global variables](https://idiosyncratic-ruby.com/9-globalization.html)",
+      "mriSourcePath": "lib/English.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/English.rb",
+      "sourceRepository": "https://github.com/ruby/English",
+      "rubygemsLink": "https://rubygems.org/gems/english",
+      "rdocLink": "https://rubyapi.org/o/english",
+      "maintainer": null,
+      "versions": {
+        "3.3": "0.8.0",
+        "3.2": "0.7.2",
+        "3.1": "0.7.1",
+        "3.0": "0.7.1"
+      }
+    },
+    {
+      "gem": "erb",
+      "native": false,
+      "autoRequire": false,
+      "description": "Templating engine for Ruby",
+      "mriSourcePath": "lib/erb.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/erb",
+      "rubygemsLink": "https://rubygems.org/gems/erb",
+      "rdocLink": "https://rubyapi.org/o/erb",
+      "maintainer": ["Masatoshi SEKI (seki)", "Takashi Kokubun (k0kubun)"],
+      "alternatives": {
+        "erubi": "https://github.com/jeremyevans/erubi"
+      },
+      "versions": {
+        "3.3": "4.0.3",
+        "3.2": "4.0.2",
+        "3.1": "2.2.3",
+        "3.0": "2.2.0"
+      }
+    },
+    {
+      "gem": "error_highlight",
+      "native": false,
+      "autoRequire": true,
+      "description": "Improves error messages with additional debug info",
+      "mriSourcePath": ["lib/error_highlight.rb", "lib/error_highlight"],
+      "jrubySourcePath": null,
+      "sourceRepository": "https://github.com/ruby/error_highlight",
+      "rubygemsLink": "https://rubygems.org/gems/error_highlight",
+      "rdocLink": "https://www.rubydoc.info/gems/error_highlight",
+      "maintainer": null,
+      "notes": "- You can [prevent Ruby from loading this default gem with](https://idiosyncratic-ruby.com/71-nothing-to-disable.html) `$ ruby --disable-error_highlight`",
+      "versions": {
+        "3.3": "0.6.0",
+        "3.2": "0.5.1",
+        "3.1": "0.3.0"
+      }
+    },
+    {
+      "gem": "etc",
+      "native": true,
+      "autoRequire": false,
+      "description": "Access UNIX info from `/etc`",
+      "mriSourcePath": "ext/etc",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/etc.rb",
+        "core/src/main/java/org/jruby/ext/etc"
+      ],
+      "sourceRepository": "https://github.com/ruby/etc",
+      "rubygemsLink": "https://rubygems.org/gems/etc",
+      "rdocLink": "https://rubyapi.org/o/etc",
+      "maintainer": null,
+      "versions": {
+        "3.3": "1.4.3",
+
+        "3.2": "1.4.2",
+
+        "3.1": "1.3.0",
+
+        "3.0": "1.3.0",
+        "3.0.2": "1.2.0",
+        "3.0.1": "1.2.0",
+        "3.0.0": "1.2.0",
+
+        "2.7": "1.1.0",
+        "2.6": "1.0.1",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "fcntl",
+      "native": true,
+      "autoRequire": false,
+      "description": "Loads values from the OS' `fcntl.h` to be used for low-level [file descriptor manipulation](https://en.wikipedia.org/wiki/File_descriptor) system calls with [IO#fcntl](https://ruby-doc.org/core/IO.html#method-i-fcntl) and [IO.sysopen](https://ruby-doc.org/core/IO.html#method-c-sysopen)",
+      "mriSourcePath": "ext/fcntl",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/fcntl.rb",
+        "core/src/main/java/org/jruby/ext/fcntl"
+      ],
+      "sourceRepository": "https://github.com/ruby/fcntl",
+      "rubygemsLink": "https://rubygems.org/gems/fcntl",
+      "rdocLink": "https://rubyapi.org/o/fcntl",
+      "maintainer": null,
+      "versions": {
+        "3.3": "1.1.0",
+
+        "3.2": "1.0.2",
+
+        "3.1": "1.0.1",
+
+        "3.0": "1.0.1",
+        "3.0.2": "1.0.0",
+        "3.0.1": "1.0.0",
+        "3.0.0": "1.0.0",
+
+        "2.7": "1.0.0",
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "fiddle",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for FFI ([Foreign Function Interface](https://sourceware.org/libffi/))",
+      "mriSourcePath": "ext/fiddle",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/fiddle.rb",
+        "lib/ruby/stdlib/fiddle"
+      ],
+      "sourceRepository": "https://github.com/ruby/fiddle",
+      "rubygemsLink": "https://rubygems.org/gems/fiddle",
+      "rdocLink": "https://rubyapi.org/o/fiddle",
+      "maintainer": "Aaron Patterson (tenderlove)",
+      "notes": "Starting with Ruby 3.2, libffi is not bundled with Ruby anymore",
+      "alternatives": {
+        "FFI": "https://github.com/ffi/ffi"
+      },
+      "versions": {
+        "3.3": "1.1.2",
+
+        "3.2": "1.1.1",
+
+        "3.1": "1.1.0",
+
+        "3.0": "1.0.8",
+        "3.0.2": "1.0.6",
+        "3.0.1": "1.0.6",
+        "3.0.0": "1.0.6",
+
+        "2.7": "1.0.0",
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "fileutils",
+      "native": false,
+      "autoRequire": false,
+      "description": "Utilities for working with the file system, such as copying, moving, or deleting files",
+      "mriSourcePath": "lib/fileutils.rb",
+      "jrubySourcePath": [true, "lib/ruby/stdlib/fileutils"],
+      "sourceRepository": "https://github.com/ruby/fileutils",
+      "rubygemsLink": "https://rubygems.org/gems/fileutils",
+      "rdocLink": "https://rubyapi.org/o/fileutils",
+      "maintainer": null,
+      "versions": {
+        "3.3": "1.7.2",
+        "3.2": "1.7.0",
+        "3.1": "1.6.0",
+        "3.0": "1.5.0",
+        "2.7": "1.4.1",
+        "2.6": "1.1.0",
+        "2.5": "1.0.2"
+      }
+    },
+    {
+      "gem": "find",
+      "native": false,
+      "autoRequire": false,
+      "description": "Finds all files in a given directory and its sub-directories",
+      "mriSourcePath": "lib/find.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/find",
+      "rubygemsLink": "https://rubygems.org/gems/find",
+      "rdocLink": "https://rubyapi.org/o/find",
+      "notes": "You can get a very similar result using: ```find .`.split($/)``",
+      "maintainer": "Kazuki Tsujimoto (ktsj)",
+      "alternatives": {
+        "<code>`find .`.split($/)</code>": null
+      },
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.1",
+        "3.1": "0.1.1",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "forwardable",
+      "native": false,
+      "autoRequire": false,
+      "description": "Provides a way to [delegate](https://en.wikipedia.org/wiki/Delegation_pattern) method calls. Also see [this overview of delegation in Ruby](http://radar.oreilly.com/2014/02/delegation-patterns-in-ruby.html), which contains an example",
+      "mriSourcePath": [
+        "lib/forwardable.rb",
+        "lib/forwardable",
+        "ext/rubyvm/lib/forwardable/impl.rb"
+      ],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/forwardable",
+      "rubygemsLink": "https://rubygems.org/gems/forwardable",
+      "rdocLink": "https://rubyapi.org/o/forwardable",
+      "maintainer": "Keiju ISHITSUKA (keiju)",
+      "versions": {
+        "3.3": "1.3.3",
+        "3.2": "1.3.3",
+        "3.1": "1.3.2",
+        "3.0": "1.3.2",
+        "2.7": "1.3.1",
+        "2.6": "1.2.0"
+      }
+    },
+    {
+      "gem": "gdbm",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for [GDBM databases](https://en.wikipedia.org/wiki/Dbm)",
+      "mriSourcePath": "ext/gdbm",
+      "sourceRepository": "https://github.com/ruby/gdbm",
+      "rubygemsLink": "https://rubygems.org/gems/gdbm",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/gdbm/rdoc/GDBM.html",
+      "removed": true,
+      "versions": {
+        "3.0": "2.1.0",
+        "2.7": "2.1.0",
+        "2.6": "2.0.0",
+        "2.5": "2.0.0"
+      }
+    },
+    {
+      "gem": "getoptlong",
+      "native": false,
+      "autoRequire": false,
+      "description": "[GNU getopt_long()](https://linux.die.net/man/3/getopt_long) style command-line option parsing",
+      "mriSourcePath": "lib/getoptlong.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/getoptlong",
+      "rubygemsLink": "https://rubygems.org/gems/getoptlong",
+      "rdocLink": "https://rubyapi.org/o/getoptlong",
+      "maintainer": null,
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "optparse": "https://stdgems.org/optparse",
+        "slop": "https://github.com/leejarvis/slop",
+        "optimist": "https://github.com/ManageIQ/optimist",
+        "rationalist": "https://github.com/janlelis/rationalist"
+      },
+      "versions": {
+        "3.3": "0.2.1",
+        "3.2": "0.2.0",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "io-console",
+      "native": true,
+      "autoRequire": false,
+      "description": "Patches `IO` for simple and portable access to the console",
+      "mriSourcePath": "ext/io/console",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/io-console",
+      "rubygemsLink": "https://rubygems.org/gems/io-console",
+      "rdocLink": "https://www.rubydoc.info/gems/io-console",
+      "maintainer": "Nobuyuki Nakada (nobu)",
+      "notes": "There is also the old [GitHub repo](https://github.com/nobu/io-console), but it is out of sync.",
+      "versions": {
+        "3.3": "0.7.1",
+
+        "3.2": "0.6.0",
+
+        "3.1": "0.5.11",
+        "3.1.0": "0.5.10",
+
+        "3.0": "0.5.7",
+        "3.0.0": "0.5.6",
+
+        "2.7": "0.5.6",
+        "2.7.0": "0.5.3",
+
+        "2.6": "0.4.7",
+        "2.5": "0.4.6",
+        "2.4": "0.4.6",
+        "2.3": "0.4.5",
+        "2.2": "0.4.3"
+      }
+    },
+    {
+      "gem": "io-nonblock",
+      "native": true,
+      "autoRequire": false,
+      "description": "Allows to work with `IO` streams in a non-blocking way",
+      "mriSourcePath": "ext/io/nonblock",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/io/nonblock.rb",
+        "core/src/main/java/org/jruby/ext/io/nonblock"
+      ],
+      "sourceRepository": "https://github.com/ruby/io-nonblock",
+      "rubygemsLink": "https://rubygems.org/gems/io-nonblock",
+      "rdocLink": "https://www.rubydoc.info/gems/io-nonblock",
+      "maintainer": "Nobuyuki Nakada (nobu)",
+      "versions": {
+        "3.3": "0.3.0",
+        "3.2": "0.2.0",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "io-wait",
+      "native": true,
+      "autoRequire": false,
+      "description": "Adds methods to wait until an `IO` stream becomes readable or writable",
+      "mriSourcePath": "ext/io/wait",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/io/wait.rb",
+        "core/src/main/java/org/jruby/ext/io/wait"
+      ],
+      "sourceRepository": "https://github.com/ruby/io-wait",
+      "rubygemsLink": "https://rubygems.org/gems/io-wait",
+      "rdocLink": "https://www.rubydoc.info/gems/io-wait",
+      "maintainer": "Nobuyuki Nakada (nobu)",
+      "versions": {
+        "3.3": "0.3.1",
+
+        "3.2": "0.3.0",
+
+        "3.1": "0.2.1",
+
+        "3.0": "0.2.0",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "ipaddr",
+      "native": false,
+      "autoRequire": false,
+      "description": "[IP address](https://en.wikipedia.org/wiki/IP_address) manipulation (IPv4 and IPv6)",
+      "mriSourcePath": "lib/ipaddr.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/ipaddr",
+      "rubygemsLink": "https://rubygems.org/gems/ipaddr",
+      "rdocLink": "https://rubyapi.org/o/ipaddr",
+      "maintainer": "Akinori MUSHA (knu)",
+      "alternatives": {
+        "ipaddress": "https://github.com/ipaddress-gem/ipaddress"
+      },
+      "versions": {
+        "3.3": "1.2.6",
+
+        "3.2": "1.2.5",
+
+        "3.1": "1.2.4",
+        "3.1.0": "1.2.3",
+
+        "3.0": "1.2.2",
+        "2.7": "1.2.2",
+        "2.6": "1.2.2",
+        "2.5": "1.2.0"
+      }
+    },
+    {
+      "gem": "irb",
+      "native": false,
+      "autoRequire": false,
+      "description": "Interactive Ruby Console ([REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop))",
+      "mriSourcePath": ["lib/irb.rb", "lib/irb"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/irb",
+      "rubygemsLink": "https://rubygems.org/gems/irb",
+      "rdocLink": "https://www.rubydoc.info/gems/irb",
+      "maintainer": [
+        "Stan Lo (st0012)",
+        "Tomoya Ishida (tompng)",
+        "Mari Imaizumi (ima1zumi)",
+        "Hitoshi Hasumi (hasumikin)"
+      ],
+      "alternatives": {
+        "pry": "https://github.com/pry/pry",
+        "rib": "https://github.com/godfat/rib",
+        "ripl": "https://github.com/cldwalker/ripl"
+      },
+      "versions": {
+        "3.3":   "1.13.1",
+        "3.3.1": "1.11.0",
+        "3.3.0": "1.11.0",
+
+        "3.2":   "1.6.2",
+
+        "3.1":   "1.4.1",
+
+        "3.0":   "1.3.5",
+        "3.0.0": "1.3.0",
+
+        "2.7":   "1.2.6",
+        "2.7.1": "1.2.3",
+        "2.7.0": "1.2.1",
+
+        "2.6":   "1.0.0"
+      }
+    },
+    {
+      "gem": "json",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for JSON ([JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON))",
+      "mriSourcePath": "ext/json",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/flori/json",
+      "rubygemsLink": "https://rubygems.org/gems/json",
+      "rdocLink": "https://rubyapi.org/o/json",
+      "maintainer": ["NARUSE", "Yui (naruse)", "Hiroshi SHIBATA (hsbt)"],
+      "notes": "- Latest Ruby releases for 2.4 / 2.5 / 2.6 / 2.7 contain a security fix (CVE-2020-16255) not included in the listed gem versions",
+      "alternatives": {
+        "oj": "https://github.com/ohler55/oj",
+        "yajl-ruby": "https://github.com/brianmario/yajl-ruby"
+      },
+      "versions": {
+        "3.3": "2.7.1",
+
+        "3.2": "2.6.3",
+
+        "3.1": "2.6.1",
+
+        "3.0": "2.5.1",
+
+        "2.7": "2.3.0",
+
+        "2.6": "2.1.0",
+
+        "2.5": "2.1.0",
+
+        "2.4": "2.0.4",
+        "2.4.1": "2.0.2",
+        "2.4.0": "2.0.2",
+
+        "2.3": "1.8.3.1",
+        "2.3.4": "1.8.3",
+        "2.3.3": "1.8.3",
+        "2.3.2": "1.8.3",
+        "2.3.1": "1.8.3",
+        "2.3.0": "1.8.3"
+      }
+    },
+    {
+      "gem": "logger",
+      "native": false,
+      "autoRequire": false,
+      "description": "[Logging utility](https://ruby.janlelis.de/50-exploring-the-stdlib-logger)",
+      "mriSourcePath": "lib/logger.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/logger",
+      "rubygemsLink": "https://rubygems.org/gems/logger",
+      "rdocLink": "https://rubyapi.org/o/logger",
+      "notes": "- **Attention:** There was a 1.2.8 version on rubygems, which was later [yanked](https://rubygems.org/gems/logger/versions/1.2.8)\n- The old repository is at [github.com/nahi/logger](https://github.com/nahi/logger)",
+      "maintainer": "Naotoshi Seo (sonots)",
+      "alternatives": {
+        "semantic_logger": "https://github.com/reidmorrison/semantic_logger",
+        "ougai": "https://github.com/tilfin/ougai",
+        "log4r": "https://github.com/colbygk/log4r",
+        "yell": "https://github.com/rudionrails/yell",
+        "lumberjack": "https://github.com/bdurand/lumberjack",
+        "logging": "https://github.com/TwP/logging",
+        "micrologger": "https://github.com/janlelis/micrologger"
+      },
+      "versions": {
+        "3.3": "1.6.0",
+        "3.2": "1.5.3",
+        "3.1": "1.5.0",
+        "3.0": "1.4.3",
+        "2.7": "1.4.2",
+        "2.6": "1.3.0"
+      }
+    },
+    {
+      "gem": "matrix",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for [matrices](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29)",
+      "mriSourcePath": ["lib/matrix.rb", "lib/matrix"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/matrix",
+      "rubygemsLink": "https://rubygems.org/gems/matrix",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/matrix/rdoc/index.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.3.1",
+        "2.7": "0.2.0",
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "mutex_m",
+      "native": false,
+      "autoRequire": false,
+      "description": "A mixin that makes any object behave like a [mutex](https://ruby-doc.org/core/Mutex.html)",
+      "mriSourcePath": "lib/mutex_m.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/mutex_m",
+      "rubygemsLink": "https://rubygems.org/gems/mutex_m",
+      "rdocLink": "https://rubyapi.org/o/mutex_m",
+      "maintainer": "Keiju ISHITSUKA (keiju)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.2",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0",
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "net-ftp",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for FTP ([File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol))",
+      "mriSourcePath": "lib/net/ftp.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/net/ftp.rb",
+      "sourceRepository": "https://github.com/ruby/net-ftp",
+      "rubygemsLink": "https://rubygems.org/gems/net-ftp",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/net/ftp/rdoc/Net/FTP.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.1.2",
+        "3.0.1": "0.1.1",
+        "3.0.0": "0.1.1"
+      }
+    },
+    {
+      "gem": "net-http",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for HTTP ([Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))",
+      "mriSourcePath": ["lib/net/http.rb", "lib/net/https.rb", "lib/net/http"],
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/net/http.rb",
+        "lib/ruby/stdlib/net/https.rb",
+        "lib/ruby/stdlib/net/http"
+      ],
+      "sourceRepository": "https://github.com/ruby/net-http",
+      "rubygemsLink": "https://rubygems.org/gems/net-http",
+      "rdocLink": "https://rubyapi.org/o/net/http",
+      "maintainer": "NARUSE, Yui (naruse)",
+      "alternatives": {
+        "HTTP": "https://github.com/httprb/http",
+        "excon": "https://github.com/excon/excon",
+        "faraday": "https://github.com/lostisland/faraday",
+        "httparty": "https://github.com/jnunemaker/httparty",
+        "httpclient": "https://github.com/nahi/httpclient",
+        "em-http-request": "https://github.com/igrigorik/em-http-request"
+      },
+      "versions": {
+        "3.3":   "0.4.1",
+        "3.3.0": "0.4.0",
+
+        "3.2":   "0.4.1",
+        "3.2.2": "0.3.2",
+        "3.2.1": "0.3.2",
+        "3.2.0": "0.3.2",
+
+        "3.1":   "0.3.0.1",
+        "3.1.4": "0.3.0",
+        "3.1.3": "0.3.0",
+        "3.1.2": "0.2.0",
+        "3.1.1": "0.2.0",
+        "3.1.0": "0.2.0",
+
+        "3.0":   "0.1.1"
+      }
+    },
+    {
+      "gem": "net-imap",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for IMAP ([Internet Message Access Protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol))",
+      "mriSourcePath": "lib/net/imap.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/net/imap.rb",
+      "sourceRepository": "https://github.com/ruby/net-imap",
+      "rubygemsLink": "https://rubygems.org/gems/net-imap",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/net/imap/rdoc/Net/IMAP.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.1.1"
+      }
+    },
+    {
+      "gem": "net-pop",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for POP3 ([Post Office Protocol](https://en.wikipedia.org/wiki/Post_Office_Protocol))",
+      "mriSourcePath": "lib/net/pop.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/net/pop.rb",
+      "sourceRepository": "https://github.com/ruby/net-pop",
+      "rubygemsLink": "https://rubygems.org/gems/net-pop",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/net/pop/rdoc/Net/POP3.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "net-protocol",
+      "native": false,
+      "autoRequire": false,
+      "description": "Internal class for the other net-* libraries",
+      "mriSourcePath": "lib/net/protocol.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/net/protocol.rb",
+      "sourceRepository": "https://github.com/ruby/net-protocol",
+      "rubygemsLink": "https://rubygems.org/gems/net-protocol",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/net/protocol/rdoc/index.html",
+      "maintainer": null,
+      "versions": {
+        "3.3": "0.2.2",
+
+        "3.2": "0.2.1",
+
+        "3.1": "0.1.2",
+
+        "3.0": "0.1.1",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "net-smtp",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for SMTP ([Simple Mail Transfer Protocol](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol))",
+      "mriSourcePath": "lib/net/smtp.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/net/smtp.rb",
+      "sourceRepository": "https://github.com/ruby/net-smtp",
+      "rubygemsLink": "https://rubygems.org/gems/net-smtp",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/net/smtp/rdoc/Net/SMTP.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.2.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "nkf",
+      "native": true,
+      "autoRequire": false,
+      "description": "[Kanji](https://en.wikipedia.org/wiki/Kanji) encoding converter. Can also be used via the [Kconv.kconv method](https://github.com/ruby/nkf/blob/master/lib/kconv.rb).",
+      "mriSourcePath": "ext/nkf",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/net/nkf.rb",
+        "core/src/main/java/org/jruby/ext/nkf"
+      ],
+      "sourceRepository": "https://github.com/ruby/nkf",
+      "rubygemsLink": "https://rubygems.org/gems/nkf",
+      "rdocLink": "https://rubyapi.org/o/nkf",
+      "maintainer": "NARUSE, Yui (narse)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "0.1.3",
+        "3.2": "0.1.2",
+        "3.1": "0.1.1",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "observer",
+      "native": false,
+      "autoRequire": false,
+      "description": "Implementation of the [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern), a way to let interested other objects know o an objetc's updates",
+      "mriSourcePath": "lib/observer.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/observer",
+      "rubygemsLink": "https://rubygems.org/gems/observer",
+      "rdocLink": "https://rubyapi.org/o/observable",
+      "maintainer": null,
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "microevent": "https://github.com/janlelis/microevent.rb",
+        "signal_lamp": "https://github.com/JEG2/signal_lamp"
+      },
+      "versions": {
+        "3.3": "0.1.2",
+        "3.2": "0.1.1",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "open3",
+      "native": false,
+      "autoRequire": false,
+      "description": "Simple spawning of child processes",
+      "mriSourcePath": "lib/open3.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/open3.rb",
+      "sourceRepository": "https://github.com/ruby/open3",
+      "rubygemsLink": "https://rubygems.org/gems/open3",
+      "rdocLink": "https://rubyapi.org/o/open3",
+      "maintainer": null,
+      "alternatives": {
+        "open4": "https://github.com/ahoward/open4"
+      },
+      "versions": {
+        "3.3": "0.2.1",
+        "3.2": "0.1.2",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "openssl",
+      "native": true,
+      "autoRequire": false,
+      "description": "Wraps [OpenSSL](https://www.openssl.org/) for cryptographic functionality",
+      "mriSourcePath": "ext/openssl",
+      "jrubySourcePath": false,
+      "sourceRepository": "https://github.com/ruby/openssl",
+      "rubygemsLink": "https://rubygems.org/gems/openssl",
+      "rdocLink": "https://ruby.github.io/openssl/",
+      "maintainer": "Kazuki Yamaguchi (rhe)",
+      "notes": "JRuby uses the Bouncy Castle-based [jruby-openssl gem](https://github.com/jruby/jruby-openssl) instead",
+      "versions": {
+        "3.3": "3.2.0",
+
+        "3.2": "3.1.0",
+
+        "3.1": "3.0.1",
+        "3.1.2": "3.0.0",
+        "3.1.1": "3.0.0",
+        "3.1.0": "3.0.0",
+
+        "3.0": "2.2.2",
+        "3.0.4": "2.2.1",
+        "3.0.3": "2.2.1",
+        "3.0.2": "2.2.0",
+        "3.0.1": "2.2.0",
+        "3.0.0": "2.2.0",
+
+        "2.7": "2.1.4",
+        "2.7.6": "2.1.3",
+        "2.7.5": "2.1.3",
+        "2.7.4": "2.1.2",
+        "2.7.3": "2.1.2",
+        "2.7.2": "2.1.2",
+        "2.7.1": "2.1.2",
+        "2.7.0": "2.1.2",
+
+        "2.6": "2.1.2",
+
+        "2.5": "2.1.2",
+        "2.5.1": "2.1.0",
+        "2.5.0": "2.1.0",
+
+        "2.4": "2.0.9",
+        "2.4.4": "2.0.7",
+        "2.4.3": "2.0.5",
+        "2.4.2": "2.0.5",
+        "2.4.1": "2.0.3",
+        "2.4.0": "2.0.2"
+      }
+    },
+    {
+      "gem": "open-uri",
+      "native": false,
+      "autoRequire": false,
+      "description": "Monkeypatches [Kernel#open](https://ruby-doc.org/core/Kernel.html#method-i-open) to support remote endpoints via `net/http` and `net/ftp`",
+      "mriSourcePath": "lib/open-uri.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/open-uri",
+      "rubygemsLink": "https://rubygems.org/gems/open-uri",
+      "rdocLink": "https://rubyapi.org/o/openuri",
+      "maintainer": "Tanaka Akira (akr)",
+      "versions": {
+        "3.3": "0.4.1",
+        "3.2": "0.3.0",
+        "3.1": "0.2.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "optparse",
+      "native": false,
+      "autoRequire": false,
+      "description": "Command-line option parser",
+      "mriSourcePath": [
+        "lib/optparse.rb",
+        "lib/optionparser.rb",
+        "lib/optparse"
+      ],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/optparse",
+      "rubygemsLink": "https://rubygems.org/gems/optparse",
+      "rdocLink": "https://rubyapi.org/o/optionparser",
+      "maintainer": "Nobuyuki Nakada (nobu)",
+      "alternatives": {
+        "slop": "https://github.com/leejarvis/slop",
+        "optimist": "https://github.com/ManageIQ/optimist",
+        "rationalist": "https://github.com/janlelis/rationalist"
+      },
+      "versions": {
+        "3.3": "0.4.0",
+
+        "3.2": "0.3.1",
+
+        "3.1": "0.2.0",
+
+        "3.0": "1.0.0",
+        "3.0.4": "0.2.0",
+        "3.0.3": "0.2.0",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "ostruct",
+      "native": false,
+      "autoRequire": false,
+      "description": "Wrapper around [Hash](https://ruby-doc.org/core/Hash.html) which lets you read and set attributes with a method-based API",
+      "mriSourcePath": "lib/ostruct.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/ostruct",
+      "rubygemsLink": "https://rubygems.org/gems/ostruct",
+      "rdocLink": "https://rubyapi.org/o/openstruct",
+      "maintainer": "Marc-André Lafortune (marcandre)",
+      "alternatives": {
+        "Hash": "https://ruby-doc.org/core/Hash.html"
+      },
+      "versions": {
+        "3.3": "0.6.0",
+        "3.2": "0.5.5",
+        "3.1": "0.5.2",
+        "3.0": "0.3.1",
+        "2.7": "0.2.0",
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "pathname",
+      "native": true,
+      "autoRequire": false,
+      "description": "Wraps `File`, `FileTest`, `Dir`, and `FileUtils` to ease working with file system paths",
+      "mriSourcePath": "ext/pathname",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/pathname.rb",
+        "core/src/main/java/org/jruby/ext/pathname"
+      ],
+      "sourceRepository": "https://github.com/ruby/pathname",
+      "rubygemsLink": "https://rubygems.org/gems/pathname",
+      "rdocLink": "https://rubyapi.org/o/pathname",
+      "maintainer": "Tanaka Akira (akr)",
+      "alternatives": {
+        "path": "https://github.com/eregon/path"
+      },
+      "versions": {
+        "3.3": "0.3.0",
+        "3.2": "0.2.1",
+        "3.1": "0.2.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "prism",
+      "native": true,
+      "autoRequire": false,
+      "description": "Prism is a portable, error tolerant, and maintainable recursive descent parser for the Ruby language",
+      "mriSourcePath": [
+        "prism_compile.c",
+        "prism_compile.h",
+        "prism_init.c",
+        "prism",
+        "lib/prism"
+      ],
+      "jrubySourcePath": false,
+      "sourceRepository": "https://github.com/ruby/prism",
+      "rubygemsLink": "https://rubygems.org/gems/prism",
+      "rdocLink": "https://gemdocs.org/gems/prism/0.19.0/",
+      "maintainer": [
+        "Kevin Newton (kddnewton)",
+        "Jemma Issroff (jemmaissroff)"
+      ],
+      "alternatives": {
+        "ripper": "https://stdgems.org/ripper",
+        "parser": "https://github.com/whitequark/parser",
+        "ruby_parser": "https://github.com/seattlerb/ruby_parser"
+      },
+      "versions": {
+        "3.3": "0.19.0"
+      }
+    },
+    {
+      "gem": "pp",
+      "native": false,
+      "autoRequire": false,
+      "description": "The `pp` print debugging helper via `require 'pp'`. It will format the result object in more readable way.",
+      "mriSourcePath": "lib/pp.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/pp.rb",
+      "sourceRepository": "https://github.com/ruby/pp",
+      "rubygemsLink": "https://rubygems.org/gems/pp",
+      "rdocLink": "https://rubyapi.org/o/pp",
+      "maintainer": "Tanaka Akira (akr)",
+      "alternatives": {
+        "awesome_print": "https://github.com/awesome-print/awesome_print",
+        "amazing_print": "https://github.com/amazing-print/amazing_print",
+        "wirb": "https://github.com/janlelis/wirb#kernelwp",
+        "hirber": "https://github.com/hirber/hirber"
+      },
+      "versions": {
+        "3.3": "0.5.0",
+
+        "3.2": "0.4.0",
+
+        "3.1": "0.3.0",
+
+        "3.0": "0.2.1",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "prettyprint",
+      "native": false,
+      "autoRequire": false,
+      "description": "Better object formatting and inspection. Also see the [pp gem](/pp/).",
+      "mriSourcePath": "lib/prettyprint.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/prettyprint",
+      "rubygemsLink": "https://rubygems.org/gems/prettyprint",
+      "rdocLink": "https://rubyapi.org/o/prettyprint",
+      "maintainer": "Tanaka Akira (akr)",
+      "alternatives": {
+        "awesome_print": "https://github.com/awesome-print/awesome_print",
+        "amazing_print": "https://github.com/amazing-print/amazing_print",
+        "wirb": "https://github.com/janlelis/wirb#kernelwp",
+        "hirber": "https://github.com/hirber/hirber"
+      },
+      "versions": {
+        "3.3": "0.2.0",
+
+        "3.2": "0.1.1",
+
+        "3.1": "0.1.1",
+
+        "3.0": "0.1.1",
+        "3.0.3": "0.1.0",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "prime",
+      "native": false,
+      "autoRequire": false,
+      "description": "Access to prime numbers and prime factorization",
+      "mriSourcePath": "lib/prime.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/prime",
+      "rubygemsLink": "https://rubygems.org/gems/prime",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/prime/rdoc/Prime.html",
+      "removed": true,
+      "versions": {
+        "3.0": "0.1.2",
+        "2.7": "0.1.1",
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "pstore",
+      "native": false,
+      "autoRequire": false,
+      "description": "Transactional file storage for Ruby objects",
+      "mriSourcePath": "lib/pstore.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/pstore",
+      "rubygemsLink": "https://rubygems.org/gems/pstore",
+      "rdocLink": "https://rubyapi.org/o/pstore",
+      "maintainer": null,
+      "versions": {
+        "3.3": "0.1.3",
+        "3.2": "0.1.2",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "psych",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for YAML ([YAML Ain't Markup Language](https://en.wikipedia.org/wiki/YAML))",
+      "mriSourcePath": "ext/psych",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/psych",
+      "rubygemsLink": "https://rubygems.org/gems/psych",
+      "rdocLink": "https://rubyapi.org/o/psych",
+      "maintainer": ["Aaron Patterson (tenderlove)", "Hiroshi SHIBATA (hsbt)"],
+      "notes": "Starting with Ruby 3.2, libyaml is not bundled with Ruby anymore",
+      "versions": {
+        "3.3": "5.1.2",
+
+        "3.2": "5.0.1",
+
+        "3.1": "4.0.4",
+        "3.1.2": "4.0.3",
+        "3.1.1": "4.0.3",
+        "3.1.0": "4.0.3",
+
+        "3.0": "3.3.2",
+        "3.0.2": "3.3.0",
+        "3.0.1": "3.3.0",
+        "3.0.0": "3.3.0",
+
+        "2.7": "3.1.0",
+
+        "2.6": "3.1.0",
+
+        "2.5": "3.0.2",
+
+        "2.4": "2.2.2",
+
+        "2.3": "2.1.0.1",
+        "2.3.4": "2.1.0",
+        "2.3.3": "2.1.0",
+        "2.3.2": "2.1.0",
+        "2.3.1": "2.0.17",
+        "2.3.0": "2.0.17",
+
+        "2.2": "2.0.8.1",
+        "2.2.7": "2.0.8",
+        "2.2.6": "2.0.8",
+        "2.2.5": "2.0.8",
+        "2.2.4": "2.0.8",
+        "2.2.3": "2.0.8",
+        "2.2.2": "2.0.8",
+        "2.2.1": "2.0.8",
+        "2.2.0": "2.0.8"
+      }
+    },
+    {
+      "gem": "racc",
+      "native": true,
+      "autoRequire": false,
+      "description": "Bindings for Racc, a [YACC](https://en.wikipedia.org/wiki/Yacc)-like [LALR(1) parser generator](https://en.wikipedia.org/wiki/LALR_parser_generator)",
+      "mriSourcePath": ["lib/racc/parser.rb", "ext/racc/cparse"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/racc",
+      "rubygemsLink": "https://rubygems.org/gems/racc",
+      "rdocLink": "https://rubyapi.org/o/racc",
+      "removed": true,
+      "maintainer": "Aaron Patterson (tenderlove)",
+      "alternatives": {
+        "treetop": "https://github.com/cjheath/treetop",
+        "citrus": "https://github.com/mjackson/citrus",
+        "parslet": "https://github.com/kschiess/parslet",
+        "ebnf": "https://github.com/dryruby/ebnf"
+      },
+      "versions": {
+        "3.2": "1.6.2",
+
+        "3.1": "1.6.0",
+
+        "3.0": "1.5.2",
+        "3.0.2": "1.5.1",
+        "3.0.1": "1.5.1",
+        "3.0.0": "1.5.1"
+      }
+    },
+    {
+      "gem": "rdoc",
+      "native": false,
+      "autoRequire": false,
+      "description": "Ruby documentation generator",
+      "mriSourcePath": ["lib/rdoc.rb", "lib/rdoc"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/rdoc",
+      "rubygemsLink": "https://rubygems.org/gems/rdoc",
+      "rdocLink": "https://ruby.github.io/rdoc/",
+      "maintainer": ["Eric Hodel (drbrain)", "Hiroshi SHIBATA (hsbt)"],
+      "alternatives": {
+        "YARD": "https://yardoc.org/"
+      },
+      "versions": {
+        "3.3":   "6.6.3.1",
+        "3.3.0": "6.6.2",
+
+        "3.2":   "6.5.1.1",
+        "3.2.3": "6.5.0",
+        "3.2.2": "6.5.0",
+        "3.2.1": "6.5.0",
+        "3.2.0": "6.5.0",
+
+        "3.1":   "6.4.1.1",
+        "3.1.4": "6.4.0",
+        "3.1.3": "6.4.0",
+        "3.1.2": "6.4.0",
+        "3.1.1": "6.4.0",
+        "3.1.0": "6.4.0",
+
+        "3.0":   "6.3.4.1",
+        "3.0.6": "6.3.3",
+        "3.0.5": "6.3.3",
+        "3.0.4": "6.3.3",
+        "3.0.3": "6.3.3",
+        "3.0.2": "6.3.1",
+        "3.0.1": "6.3.0",
+        "3.0.0": "6.3.0",
+
+        "2.7":   "6.2.1.1",
+        "2.7.3": "6.2.1",
+        "2.7.2": "6.2.1",
+        "2.7.1": "6.2.1",
+        "2.7.0": "6.2.1",
+
+        "2.6":   "6.1.2.1",
+        "2.6.7": "6.1.2",
+        "2.6.6": "6.1.2",
+        "2.6.5": "6.1.2",
+        "2.6.4": "6.1.2",
+        "2.6.3": "6.1.0",
+        "2.6.2": "6.1.0",
+        "2.6.1": "6.1.0",
+        "2.6.0": "6.1.0",
+
+        "2.5":   "6.0.1.1",
+        "2.5.5": "6.0.1",
+        "2.5.4": "6.0.1",
+        "2.5.3": "6.0.1",
+        "2.5.2": "6.0.1",
+        "2.5.1": "6.0.1",
+        "2.5.0": "6.0.1",
+
+        "2.4":   "5.0.1",
+        "2.4.6": "5.0.0",
+        "2.4.5": "5.0.0",
+        "2.4.4": "5.0.0",
+        "2.4.3": "5.0.0",
+        "2.4.2": "5.0.0",
+        "2.4.1": "5.0.0",
+        "2.4.0": "5.0.0",
+
+        "2.3":   "4.2.1",
+
+        "2.2":   "4.2.0"
+      }
+    },
+    {
+      "gem": "readline",
+      "native": false,
+      "autoRequire": false,
+      "description": "If available, [readline-ext](https://stdgems.org/readline-ext) will be loaded, or (Ruby-only) default gem [reline](https://stdgems.org/reline) will be used.",
+      "mriSourcePath": "ext/readline",
+      "jrubySourcePath": false,
+      "sourceRepository": "https://github.com/ruby/readline",
+      "rubygemsLink": "https://rubygems.org/gems/readline",
+      "rdocLink": "https://rubyapi.org/o/readline",
+      "maintainer": "TAKAO Kouji (kouji)",
+      "notes": "JRuby uses the jline-based [jruby-readline gem](https://github.com/jruby/jruby-readline) instead",
+      "alternatives": {
+        "rb-readline": "https://github.com/ConnorAtherton/rb-readline"
+      },
+      "versions": {
+        "3.3": "0.0.4",
+        "3.2": "0.0.3",
+        "3.1": "0.0.3",
+        "3.0": "0.0.2",
+        "2.7": "0.0.2"
+      }
+    },
+    {
+      "gem": "readline-ext",
+      "native": true,
+      "autoRequire": false,
+      "description": "Interface to [GNU Readline](https://directory.fsf.org/wiki/Readline) and [NetBSD Editline](https://thrysoee.dk/editline/)",
+      "mriSourcePath": "ext/readline",
+      "jrubySourcePath": false,
+      "sourceRepository": "https://github.com/ruby/readline-ext",
+      "rubygemsLink": "https://rubygems.org/gems/readline-ext",
+      "rdocLink": "https://rubyapi.org/o/readline",
+      "removed": true,
+      "notes": "- Was just called **readline** before Ruby 2.7\n- JRuby uses the jline-based [jruby-readline gem](https://github.com/jruby/jruby-readline) instead",
+      "alternatives": {
+        "reline": "https://stdgems.org/reline/",
+        "rb-readline": "https://github.com/ConnorAtherton/rb-readline"
+      },
+      "versions": {
+        "3.2": "0.1.5",
+        "3.1": "0.1.4",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "reline",
+      "native": false,
+      "autoRequire": false,
+      "description": "Ruby-only implementation of [GNU Readline](https://directory.fsf.org/wiki/Readline) / [NetBSD Editline](https://thrysoee.dk/editline/) ",
+      "mriSourcePath": "lib/reline",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/reline",
+      "rubygemsLink": "https://rubygems.org/gems/reline",
+      "rdocLink": "https://rubyapi.org/o/reline",
+      "maintainer": [
+        "Stan Lo (st0012)",
+        "Tomoya Ishida (tompng)",
+        "Mari Imaizumi (ima1zumi)",
+        "Hitoshi Hasumi (hasumikin)"
+      ],
+      "alternatives": {
+        "readline-ext": "https://stdgems.org/readline-ext/",
+        "rb-readline": "https://github.com/ConnorAtherton/rb-readline"
+      },
+      "versions": {
+        "3.3":   "0.5.7",
+        "3.3.1": "0.4.1",
+        "3.3.0": "0.4.1",
+
+        "3.2":   "0.3.2",
+
+        "3.1":   "0.3.1",
+        "3.1.2": "0.3.0",
+        "3.1.1": "0.3.0",
+        "3.1.0": "0.3.0",
+
+        "3.0":   "0.2.5",
+        "3.0.0": "0.2.0",
+
+        "2.7":   "0.1.5",
+        "2.7.1": "0.1.3",
+        "2.7.0": "0.1.2"
+      }
+    },
+    {
+      "gem": "resolv",
+      "native": false,
+      "autoRequire": false,
+      "description": "Thread-aware [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) resolver",
+      "mriSourcePath": ["lib/resolv.rb"],
+      "jrubySourcePath": "lib/ruby/stdlib/resolv.rb",
+      "sourceRepository": "https://github.com/ruby/resolv",
+      "rubygemsLink": "https://rubygems.org/gems/resolv",
+      "rdocLink": "https://rubyapi.org/o/resolv",
+      "maintainer": "Tanaka Akira (akr)",
+      "alternatives": {
+        "RubyDNS": "https://github.com/socketry/rubydns",
+        "Net::DNS": "https://github.com/bluemonk/net-dns",
+        "em-resolv-replace": "https://github.com/gmodarelli/em-resolv-replace"
+      },
+      "versions": {
+        "3.3": "0.3.0",
+
+        "3.2": "0.2.2",
+
+        "3.1": "0.2.1",
+
+        "3.0": "0.2.1",
+        "3.0.2": "0.2.0",
+        "3.0.1": "0.2.0",
+        "3.0.0": "0.2.0"
+      }
+    },
+    {
+      "gem": "resolv-replace",
+      "native": false,
+      "autoRequire": false,
+      "description": "Will replace [Socket](https://ruby-doc.org/stdlib/libdoc/socket/rdoc/Socket.html)'s DNS with [resolv](https://stdgems.org/resolv)",
+      "mriSourcePath": ["lib/resolv-replace.rb"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/resolv-replace",
+      "rubygemsLink": "https://rubygems.org/gems/resolv-replace",
+      "rdocLink": "https://rubyapi.org/o/resolv",
+      "maintainer": "Tanaka Akira (akr)",
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "RubyDNS": "https://github.com/socketry/rubydns",
+        "Net::DNS": "https://github.com/bluemonk/net-dns",
+        "em-resolv-replace": "https://github.com/gmodarelli/em-resolv-replace"
+      },
+      "versions": {
+        "3.3": "0.1.1",
+        "3.2": "0.1.1",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "rexml",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for XML ([Extensible Markup Language](https://en.wikipedia.org/wiki/XML))",
+      "mriSourcePath": "lib/rexml",
+      "sourceRepository": "https://github.com/ruby/rexml",
+      "rubygemsLink": "https://rubygems.org/gems/rexml",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.7.4/libdoc/rexml/rdoc/REXML.html",
+      "removed": true,
+      "alternatives": {
+        "Nokogiri": "https://nokogiri.org",
+        "Oga": "https://github.com/YorickPeterse/oga"
+      },
+      "versions": {
+        "2.7": "3.2.3.1",
+        "2.7.2": "3.2.3",
+        "2.7.1": "3.2.3",
+        "2.7.0": "3.2.3",
+
+        "2.6": "3.1.9.1",
+        "2.6.6": "3.1.9",
+        "2.6.5": "3.1.9",
+        "2.6.4": "3.1.9",
+        "2.6.3": "3.1.9",
+        "2.6.2": "3.1.9",
+        "2.6.1": "3.1.9",
+        "2.6.0": "3.1.9"
+      }
+    },
+    {
+      "gem": "rinda",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support fot the [Linda distributed computing paradigm](https://en.wikipedia.org/wiki/Linda_%28coordination_language%29) in [drb](https://ruby-doc.org/stdlib/libdoc/drb/rdoc/index.html)",
+      "mriSourcePath": "lib/rinda",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/rinda",
+      "rubygemsLink": "https://rubygems.org/gems/rinda",
+      "rdocLink": "https://ruby-doc.org/3.2.0/stdlibs/rinda/table_of_contents.html",
+      "maintainer": "Masatoshi SEKI (seki)",
+      "willBecomeBundledGem": true,
+      "versions": {
+        "3.3": "0.2.0",
+
+        "3.2": "0.1.1",
+
+        "3.1": "0.1.1",
+
+        "3.0": "0.1.1",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "rss",
+      "native": false,
+      "autoRequire": false,
+      "description": "Support for RSS ([Rich Site Summary](https://en.wikipedia.org/wiki/RSS)) and [Atom](https://en.wikipedia.org/wiki/Atom_%28standard%29)",
+      "mriSourcePath": ["lib/rss.rb", "lib/rss"],
+      "sourceRepository": "https://github.com/ruby/rss",
+      "rubygemsLink": "https://rubygems.org/gems/rss",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.7.4/libdoc/rss/rdoc/RSS.html",
+      "removed": true,
+      "versions": {
+        "2.7": "0.2.8",
+        "2.6": "0.2.7"
+      }
+    },
+    {
+      "gem": "ruby2_keywords",
+      "native": false,
+      "autoRequire": true,
+      "description": "A shim gemspec to indicate that the Ruby implementation includes the `ruby2_keywords` method",
+      "mriSourcePath": null,
+      "sourceRepository": "https://github.com/ruby/ruby2_keywords",
+      "rubygemsLink": "https://rubygems.org/gems/ruby2_keywords",
+      "rdocLink": "https://www.rubydoc.info/gems/ruby2_keywords",
+      "maintainer": null,
+      "notes": "Although `ruby2_keywords` is introduced as a default gem in Ruby 3.1, the `ruby2_keywords` method is available on earlier Ruby versions. See [the announcement](https://www.ruby-lang.org/en/news/2019/12/12/separation-of-positional-and-keyword-arguments-in-ruby-3-0/) and [this blog post](https://eregon.me/blog/2021/02/13/correct-delegation-in-ruby-2-27-3.html) for information about how to use this feature.",
+      "versions": {
+        "3.3": "0.0.5",
+        "3.2": "0.0.5",
+        "3.1": "0.0.5"
+      }
+    },
+    {
+      "gem": "rubygems",
+      "native": false,
+      "autoRequire": true,
+      "description": "[RubyGems](https://rubygems.org) allows you to download, install, and use Ruby software packages on your system",
+      "mriSourcePath": ["lib/rubygems.rb", "lib/rubygems"],
+      "jrubySourcePath": [true, "lib/ruby/stdlib/rubygems/defaults"],
+      "sourceRepository": "https://github.com/rubygems/rubygems",
+      "rubygemsLink": "https://rubygems.org/gems/rubygems-update",
+      "rdocLink": "https://rubyapi.org/o/gem",
+      "maintainer": ["Eric Hodel (drbrain)", "Hiroshi SHIBATA (hsbt)"],
+      "notes": "- You can [prevent Ruby from loading RubyGems (and any gems)](https://idiosyncratic-ruby.com/71-nothing-to-disable.html) with `$ ruby --disable-gems`",
+      "versions": {
+        "3.3":   "3.5.11",
+        "3.3.2": "3.5.9",
+        "3.3.1": "3.5.9",
+        "3.3.0": "3.5.3",
+
+        "3.2":   "3.4.19",
+        "3.2.2": "3.4.10",
+        "3.2.1": "3.4.6",
+        "3.2.0": "3.4.1",
+
+        "3.1":   "3.3.27",
+        "3.1.4": "3.3.26",
+        "3.1.3": "3.3.26",
+        "3.1.2": "3.3.7",
+        "3.1.1": "3.3.7",
+        "3.1.0": "3.3.3",
+
+        "3.0":   "3.2.33",
+        "3.0.3": "3.2.32",
+        "3.0.2": "3.2.15",
+        "3.0.1": "3.2.15",
+        "3.0.0": "3.2.3",
+
+        "2.7":   "3.1.6",
+        "2.7.2": "3.1.4",
+        "2.7.1": "3.1.2",
+        "2.7.0": "3.1.2",
+
+        "2.6":   "3.0.3.1",
+        "2.6.6": "3.0.3",
+        "2.6.5": "3.0.3",
+        "2.6.4": "3.0.3",
+        "2.6.3": "3.0.3",
+        "2.6.2": "3.0.3",
+        "2.6.1": "3.0.1",
+        "2.6.0": "3.0.1",
+
+        "2.5":   "2.7.6.3",
+        "2.5.8": "2.7.6.2",
+        "2.5.7": "2.7.6.2",
+        "2.5.6": "2.7.6.2",
+        "2.5.5": "2.7.6.2",
+        "2.5.4": "2.7.6.2",
+        "2.5.3": "2.7.6",
+        "2.5.2": "2.7.6",
+        "2.5.1": "2.7.6",
+        "2.5.0": "2.7.3",
+
+        "2.4":   "2.6.14.4",
+        "2.4.5": "2.6.14.3",
+        "2.4.4": "2.6.14.1",
+        "2.4.3": "2.6.14",
+        "2.4.2": "2.6.13",
+        "2.4.1": "2.6.11",
+        "2.4.0": "2.6.8",
+
+        "2.3":   "2.5.2.3",
+        "2.3.6": "2.5.2.2",
+        "2.3.5": "2.5.2.1",
+        "2.3.4": "2.5.2",
+        "2.3.3": "2.5.2",
+        "2.3.2": "2.5.2",
+        "2.3.1": "2.5.1",
+        "2.3.0": "2.5.1",
+
+        "2.2":   "2.4.5.5",
+        "2.2.9": "2.4.5.4",
+        "2.2.8": "2.4.5.3",
+        "2.2.7": "2.4.5.2",
+        "2.2.6": "2.4.5.2",
+        "2.2.5": "2.4.5.1",
+        "2.2.4": "2.4.5.1",
+        "2.2.3": "2.4.5.1",
+        "2.2.2": "2.4.5",
+        "2.2.1": "2.4.5",
+        "2.2.0": "2.4.5"
+      }
+    },
+    {
+      "gem": "scanf",
+      "native": false,
+      "autoRequire": false,
+      "description": "Pure-Ruby [scanf](https://en.wikipedia.org/wiki/Scanf_format_string) implementation",
+      "mriSourcePath": "lib/scanf.rb",
+      "sourceRepository": "https://github.com/ruby/scanf",
+      "rubygemsLink": "https://rubygems.org/gems/scanf",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/scanf/rdoc/Scanf.html",
+      "removed": true,
+      "versions": {
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "sdbm",
+      "native": true,
+      "autoRequire": false,
+      "description": "Support for [SDBM databases](https://en.wikipedia.org/wiki/Dbm)",
+      "mriSourcePath": "ext/sdbm",
+      "sourceRepository": "https://github.com/ruby/sdbm",
+      "rubygemsLink": "https://rubygems.org/gems/sdbm",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.7.4/libdoc/sdbm/rdoc/SDBM.html",
+      "removed": true,
+      "versions": {
+        "2.7": "1.0.0",
+        "2.6": "1.0.0",
+        "2.5": "1.0.0"
+      }
+    },
+    {
+      "gem": "securerandom",
+      "native": false,
+      "autoRequire": false,
+      "description": "Provides cryptographical randomness from openssl or the OS",
+      "mriSourcePath": "lib/securerandom.rb",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/securerandom.rb",
+        "core/src/main/java/org/jruby/ext/securerandom"
+      ],
+      "sourceRepository": "https://github.com/ruby/securerandom",
+      "rubygemsLink": "https://rubygems.org/gems/securerandom",
+      "rdocLink": "https://rubyapi.org/o/securerandom",
+      "maintainer": "Tanaka Akira (akr)",
+      "versions": {
+        "3.3": "0.3.1",
+
+        "3.2": "0.2.2",
+
+        "3.1": "0.2.0",
+        "3.1.2": "0.1.1",
+        "3.1.1": "0.1.1",
+        "3.1.0": "0.1.1",
+
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "set",
+      "native": false,
+      "autoRequire": false,
+      "description": "Data structure for unordered collections without duplicates. Implemented on top of Hash.",
+      "mriSourcePath": "lib/set.rb",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/set.rb",
+        "core/src/main/java/org/jruby/ext/set"
+      ],
+      "sourceRepository": "https://github.com/ruby/set",
+      "rubygemsLink": "https://rubygems.org/gems/set",
+      "rdocLink": "https://rubyapi.org/o/set",
+      "maintainer": "Akinori MUSHA (knu)",
+      "notes": "- Although this default gem is not automatically required, it will be autoloaded as soon you use the `Set` constant or the `to_set` method (Ruby 3.2+)\n-Prior to v1.0.0, this gem included the SortedSet class (now exctracted to the [sorted_set gem](https://github.com/knu/sorted_set))",
+      "versions": {
+        "3.3": "1.1.0",
+        "3.2": "1.0.3",
+        "3.1": "1.0.2",
+        "3.0": "1.0.1"
+      }
+    },
+    {
+      "gem": "shell",
+      "native": false,
+      "autoRequire": false,
+      "description": "Provides a Ruby interface for interacting with the [shell](https://en.wikipedia.org/wiki/Bourne_shell)",
+      "mriSourcePath": ["lib/shell.rb", "lib/shell"],
+      "sourceRepository": "https://github.com/ruby/shell",
+      "rubygemsLink": "https://rubygems.org/gems/shell",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/shell/rdoc/Shell.html",
+      "removed": true,
+      "versions": {
+        "2.6": "0.7"
+      }
+    },
+    {
+      "gem": "shellwords",
+      "native": false,
+      "autoRequire": false,
+      "description": "Escape and manipulate commands to be run in the [shell](https://en.wikipedia.org/wiki/Bourne_shell)",
+      "mriSourcePath": "lib/shellwords.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/shellwords",
+      "rubygemsLink": "https://rubygems.org/gems/shellwords",
+      "rdocLink": "https://rubyapi.org/o/shellwords",
+      "maintainer": "Akinori MUSHA (knu)",
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.0",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "singleton",
+      "native": false,
+      "autoRequire": false,
+      "description": "Mixin for Ruby classes that should only have one instance",
+      "mriSourcePath": "lib/singleton.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/singleton",
+      "rubygemsLink": "https://rubygems.org/gems/singleton",
+      "rdocLink": "https://rubyapi.org/o/singleton",
+      "maintainer": "Yukihiro Matsumoto (matz)",
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.1",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "stringio",
+      "native": true,
+      "autoRequire": false,
+      "description": "Makes strings behave like IO objects",
+      "mriSourcePath": "ext/stringio",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/stringio.rb",
+        "core/src/main/java/org/jruby/ext/stringio"
+      ],
+      "sourceRepository": "https://github.com/ruby/stringio",
+      "rubygemsLink": "https://rubygems.org/gems/stringio",
+      "rdocLink": "https://rubyapi.org/o/stringio",
+      "maintainer": "Nobuyuki Nakada (nobu)",
+      "versions": {
+        "3.3":   "3.1.1",
+        "3.3.2": "3.1.0",
+        "3.3.1": "3.1.0",
+        "3.3.0": "3.1.0",
+
+        "3.2":   "3.0.4",
+
+        "3.1":   "3.0.1.2",
+        "3.1.4": "3.0.1",
+        "3.1.3": "3.0.1",
+        "3.1.2": "3.0.1",
+        "3.1.1": "3.0.1",
+        "3.1.0": "3.0.1",
+
+        "3.0":   "3.0.1.1",
+        "3.0.6": "3.0.1",
+        "3.0.5": "3.0.1",
+        "3.0.4": "3.0.1",
+        "3.0.3": "3.0.1",
+        "3.0.2": "3.0.0",
+        "3.0.1": "3.0.0",
+        "3.0.0": "3.0.0",
+
+        "2.7":   "0.1.0",
+        "2.6":   "0.0.2",
+        "2.5":   "0.0.1"
+      }
+    },
+    {
+      "gem": "strscan",
+      "native": true,
+      "autoRequire": false,
+      "description": "Lexical string scanning",
+      "mriSourcePath": "ext/strscan",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/strscan.rb",
+        "core/src/main/java/org/jruby/ext/strscan"
+      ],
+      "sourceRepository": "https://github.com/ruby/strscan",
+      "rubygemsLink": "https://rubygems.org/gems/strscan",
+      "rdocLink": "https://rubyapi.org/o/stringscanner",
+      "maintainer": "Kouhei Sutou (kou)",
+      "versions": {
+        "3.3":   "3.0.9",
+        "3.3.2": "3.0.7",
+        "3.3.1": "3.0.7",
+        "3.3.0": "3.0.7",
+
+        "3.2":   "3.0.5",
+
+        "3.1":   "3.0.1",
+
+        "3.0":   "3.0.1",
+        "3.0.2": "3.0.0",
+        "3.0.1": "3.0.0",
+        "3.0.0": "3.0.0",
+
+        "2.7":   "1.0.3",
+
+        "2.6":   "1.0.0",
+        
+        "2.5":   "1.0.0"
+      }
+    },
+    {
+      "gem": "sync",
+      "native": false,
+      "autoRequire": false,
+      "description": "[Two-phase lock](https://en.wikipedia.org/wiki/Two-phase_locking) with a counter for multi-threaded code",
+      "mriSourcePath": "lib/sync.rb",
+      "sourceRepository": "https://github.com/ruby/sync",
+      "rubygemsLink": "https://rubygems.org/gems/sync",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/sync/rdoc/Sync_m.html",
+      "removed": true,
+      "versions": {
+        "2.6": "0.5.0"
+      }
+    },
+    {
+      "gem": "syslog",
+      "native": true,
+      "autoRequire": false,
+      "description": "Interface to the low-level [syslog](https://en.wikipedia.org/wiki/Syslog) logger",
+      "mriSourcePath": "ext/syslog",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/syslog.rb",
+        "lib/ruby/stdlib/syslog",
+        "core/src/main/java/org/jruby/ext/syslog"
+      ],
+      "sourceRepository": "https://github.com/ruby/syslog",
+      "rubygemsLink": "https://rubygems.org/gems/syslog",
+      "rdocLink": "https://rubyapi.org/o/syslog",
+      "maintainer": "Akinori MUSHA (knu)",
+      "willBecomeBundledGem": true,
+      "alternatives": {
+        "syslogger": "https://github.com/crohr/syslogger",
+        "log4r": "https://github.com/colbygk/log4r/blob/master/lib/log4r/outputter/syslogoutputter.rb",
+        "lumberjack_syslog_device": "https://github.com/bdurand/lumberjack_syslog_device",
+        "yell-adapters-syslog": "https://github.com/rudionrails/yell/wiki/additional-adapters-syslog"
+      },
+      "versions": {
+        "3.3": "0.1.2",
+        "3.2": "0.1.1",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "syntax_suggest",
+      "native": false,
+      "autoRequire": false,
+      "description": "Assists with code recommendation to resolve Ruby syntax errors",
+      "mriSourcePath": ["lib/syntax_suggest.rb", "lib/syntax_suggest"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/syntax_suggest",
+      "rubygemsLink": "https://rubygems.org/gems/syntax_suggest",
+      "rdocLink": "https://rubyapi.org/o/syntaxsuggest",
+      "maintainer": null,
+      "versions": {
+        "3.3": "2.0.0",
+        "3.2": "1.0.2"
+      }
+    },
+    {
+      "gem": "tempfile",
+      "native": false,
+      "autoRequire": false,
+      "description": "Simplifies OS independent creation of temporary files",
+      "mriSourcePath": "lib/tempfile.rb",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/tempfile.rb",
+        "core/src/main/java/org/jruby/ext/tempfile"
+      ],
+      "sourceRepository": "https://github.com/ruby/tempfile",
+      "rubygemsLink": "https://rubygems.org/gems/tempfile",
+      "rdocLink": "https://rubyapi.org/o/tempfile",
+      "maintainer": null,
+      "versions": {
+        "3.3": "0.2.1",
+        "3.2": "0.1.3",
+        "3.1": "0.1.2",
+        "3.0": "0.1.1"
+      }
+    },
+    {
+      "gem": "thwait",
+      "native": false,
+      "autoRequire": false,
+      "description": "Waits for threads to finish",
+      "mriSourcePath": ["lib/thwait.rb", "lib/thwait"],
+      "sourceRepository": "https://github.com/ruby/thwait",
+      "rubygemsLink": "https://rubygems.org/gems/thwait",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.6.8/libdoc/thwait/rdoc/ThWait.html",
+      "removed": true,
+      "versions": {
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "time",
+      "native": false,
+      "autoRequire": false,
+      "description": "Adds more methods to `Time`",
+      "mriSourcePath": "lib/time.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/time",
+      "rubygemsLink": "https://rubygems.org/gems/time",
+      "rdocLink": "https://www.rubydoc.info/stdlib/time/Time",
+      "maintainer": "Tanaka Akira (akr)",
+      "versions": {
+        "3.3": "0.3.0",
+
+        "3.2": "0.2.2",
+        "3.2.1": "0.2.1",
+        "3.2.0": "0.2.1",
+
+        "3.1": "0.2.2",
+        "3.1.3": "0.2.0",
+        "3.1.2": "0.2.0",
+        "3.1.1": "0.2.0",
+        "3.1.0": "0.2.0",
+
+        "3.0": "0.1.1",
+        "3.0.5": "0.1.0",
+        "3.0.4": "0.1.0",
+        "3.0.3": "0.1.0",
+        "3.0.2": "0.1.0",
+        "3.0.1": "0.1.0",
+        "3.0.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "timeout",
+      "native": false,
+      "autoRequire": false,
+      "description": "Auto-terminates code blocks after the time limit is reached",
+      "mriSourcePath": "lib/timeout.rb",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/timeout.rb",
+        "core/src/main/java/org/jruby/ext/timeout"
+      ],
+      "sourceRepository": "https://github.com/ruby/timeout",
+      "rubygemsLink": "https://rubygems.org/gems/timeout",
+      "rdocLink": "https://rubyapi.org/o/timeout",
+      "maintainer": ["Yukihiro Matsumoto (matz)"],
+      "alternatives": {
+        "Ultimate Guide to Ruby Timeouts": "https://github.com/ankane/the-ultimate-guide-to-ruby-timeouts"
+      },
+      "versions": {
+        "3.3": "0.4.1",
+        "3.2": "0.3.1",
+        "3.1": "0.2.0",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "tmpdir",
+      "native": false,
+      "autoRequire": false,
+      "description": "Adds a `Dir.mktmpdir` method for creating temporary directories OS independently",
+      "mriSourcePath": "lib/tmpdir.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/tmpdir.rb",
+      "sourceRepository": "https://github.com/ruby/tmpdir",
+      "rubygemsLink": "https://rubygems.org/gems/tmpdir",
+      "rdocLink": "https://www.rubydoc.info/stdlib/tmpdir/Dir",
+      "maintainer": null,
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.3",
+        "3.1": "0.1.2",
+        "3.0": "0.1.2",
+        "3.0.0": "0.1.1"
+      }
+    },
+    {
+      "gem": "tracer",
+      "native": false,
+      "autoRequire": false,
+      "description": "Outputs the [code execution trace](https://en.wikipedia.org/wiki/Tracing_%28software%29) via [Kernel#set_trace_func](https://ruby-doc.org/core/Kernel.html#method-i-set_trace_func)",
+      "mriSourcePath": ["lib/tracer.rb", "lib/tracer"],
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/tracer",
+      "rubygemsLink": "https://rubygems.org/gems/tracer",
+      "rdocLink": "https://ruby-doc.org/stdlib-3.0.2/libdoc/tracer/rdoc/Tracer.html",
+      "alternatives": {
+        "TracePoint": "https://ruby-doc.org/core/TracePoint.html"
+      },
+      "removed": true,
+      "versions": {
+        "3.0": "0.1.1",
+        "2.7": "0.1.0",
+        "2.6": "0.1.0"
+      }
+    },
+    {
+      "gem": "tsort",
+      "native": false,
+      "autoRequire": false,
+      "description": "Topological sorting using [Tarjan’s algorithm](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm), which finds [strongly connected components](https://en.wikipedia.org/wiki/Strongly_connected_component) in [graphs](https://en.wikipedia.org/wiki/Graph_%28abstract_data_type%29)",
+      "mriSourcePath": "lib/tsort.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/tsort",
+      "rubygemsLink": "https://rubygems.org/gems/tsort",
+      "rdocLink": "https://rubyapi.org/o/tsort",
+      "maintainer": "Tanaka Akira (akr)",
+      "versions": {
+        "3.3": "0.2.0",
+        "3.2": "0.1.1",
+        "3.1": "0.1.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "un",
+      "native": false,
+      "autoRequire": false,
+      "description": "[Utilities to replace common UNIX commands](https://idiosyncratic-ruby.com/6-run-ruby-run.html)",
+      "mriSourcePath": "lib/un.rb",
+      "jrubySourcePath": true,
+      "sourceRepository": "https://github.com/ruby/un",
+      "rubygemsLink": "https://rubygems.org/gems/un",
+      "rdocLink": "https://www.rubydoc.info/stdlib/un",
+      "maintainer": "WATANABE Hirofumi (eban)",
+      "versions": {
+        "3.3": "0.3.0",
+        "3.2": "0.2.1",
+        "3.1": "0.2.0",
+        "3.0": "0.1.0"
+      }
+    },
+    {
+      "gem": "uri",
+      "native": false,
+      "autoRequire": false,
+      "description": "[URI](https://en.wikipedia.org/wiki/Uniform_resource_identifier)/URL manipulation",
+      "mriSourcePath": ["lib/uri.rb", "lib/uri"],
+      "jrubySourcePath": ["lib/ruby/stdlib/uri.rb", "lib/ruby/stdlib/uri"],
+      "sourceRepository": "https://github.com/ruby/uri",
+      "rubygemsLink": "https://rubygems.org/gems/uri",
+      "rdocLink": "https://rubyapi.org/o/uri",
+      "maintainer": "NARUSE, Yui (naruse)",
+      "alternatives": {
+        "addressable": "https://github.com/sporkmonger/addressable",
+        "ruby-uriparse": "https://github.com/tlewin/ruby-uriparser"
+      },
+      "versions": {
+        "3.3":   "0.13.0",
+
+        "3.2":   "0.12.2",
+        "3.2.2": "0.12.1",
+        "3.2.1": "0.12.0",
+        "3.2.0": "0.12.0",
+
+        "3.1":   "0.12.2",
+        "3.1.4": "0.12.1",
+        "3.1.3": "0.11.0",
+        "3.1.2": "0.11.0",
+        "3.1.1": "0.11.0",
+        "3.1.0": "0.11.0",
+
+        "3.0":   "0.10.2",
+        "3.0.5": "0.10.1",
+        "3.0.4": "0.10.1",
+        "3.0.3": "0.10.1",
+        "3.0.2": "0.10.1",
+        "3.0.1": "0.10.1",
+        "3.0.0": "0.10.1",
+
+        "2.7":   "0.10.0.2",
+        "2.7.7": "0.10.0",
+        "2.7.6": "0.10.0",
+        "2.7.5": "0.10.0",
+        "2.7.4": "0.10.0",
+        "2.7.3": "0.10.0",
+        "2.7.2": "0.10.0",
+        "2.7.1": "0.10.0",
+        "2.7.0": "0.10.0"
+      }
+    },
+    {
+      "gem": "weakref",
+      "native": false,
+      "autoRequire": false,
+      "description": "Explicitly allow objects to be garbage collected",
+      "mriSourcePath": "lib/weakref.rb",
+      "jrubySourcePath": "lib/ruby/stdlib/weakref.rb",
+      "sourceRepository": "https://github.com/ruby/weakref",
+      "rubygemsLink": "https://rubygems.org/gems/weakref",
+      "rdocLink": "https://rubyapi.org/o/weakref",
+      "maintainer": null,
+      "alternatives": {
+        "ref": "https://github.com/ruby-concurrency/ref"
+      },
+      "versions": {
+        "3.3": "0.1.3",
+        "3.2": "0.1.2",
+        "3.1": "0.1.1",
+        "3.0": "0.1.1"
+      }
+    },
+    {
+      "gem": "webrick",
+      "native": false,
+      "autoRequire": false,
+      "description": "HTTP Server",
+      "mriSourcePath": ["lib/webrick.rb", "lib/webrick"],
+      "sourceRepository": "https://github.com/ruby/webrick",
+      "rubygemsLink": "https://rubygems.org/gems/webrick",
+      "rdocLink": "https://ruby-doc.org/stdlib-2.7.4/libdoc/webrick/rdoc/WEBrick.html",
+      "notes": "**Please note:** Despite the gemspec stating otherwise, the webrick version included with Ruby might be more recent than version 1.4.2. For example, the webrick included in Ruby 2.6.5, 2.5.7, 2.4.9, and 2.4.8 does include security fixes for CVE-2019-16201 and CVE-2019-16254.",
+      "alternatives": {
+        "puma": "https://puma.io",
+        "thin": "https://github.com/macournoyer/thin",
+        "unicorn": "https://yhbt.net/unicorn.git/about/"
+      },
+      "removed": true,
+      "versions": {
+        "2.7": "1.6.1",
+        "2.7.2": "1.6.0",
+        "2.7.1": "1.6.0",
+        "2.7.0": "1.6.0",
+
+        "2.6": "1.4.4",
+        "2.6.6": "1.4.2",
+        "2.6.5": "1.4.2",
+        "2.6.4": "1.4.2",
+        "2.6.3": "1.4.2",
+        "2.6.2": "1.4.2",
+        "2.6.1": "1.4.2",
+        "2.6.0": "1.4.2",
+
+        "2.5": "1.4.2.1",
+        "2.5.8": "1.4.2",
+        "2.5.7": "1.4.2",
+        "2.5.6": "1.4.2",
+        "2.5.5": "1.4.2",
+        "2.5.4": "1.4.2",
+        "2.5.3": "1.4.2",
+        "2.5.2": "1.4.2",
+        "2.5.1": "1.4.2",
+        "2.5.0": "1.4.2",
+
+        "2.4": "1.3.1"
+      }
+    },
+    {
+      "gem": "win32ole",
+      "native": true,
+      "autoRequire": false,
+      "description": "Windows [OLE automation](https://en.wikipedia.org/wiki/OLE_Automation) interface",
+      "mriSourcePath": "ext/win32ole",
+      "jrubySourcePath": "lib/ruby/stdlib/win32ole.rb",
+      "sourceRepository": "https://github.com/ruby/win32ole",
+      "rubygemsLink": "https://rubygems.org/gems/win32ole",
+      "rdocLink": "https://rubyapi.org/o/win32ole",
+      "maintainer": "Masaki Suketa (suke)",
+      "versions": {
+        "3.3": "1.8.10",
+        "3.2": "1.8.9",
+        "3.1": "1.8.8",
+        "3.0": "1.8.8"
+      }
+    },
+    {
+      "gem": "yaml",
+      "native": false,
+      "autoRequire": false,
+      "description": "`require 'yaml'` will load the [psych default gem](https://stdgems.org/psych/), **yaml/dbm** is a wrapper around [DBM](https://stdgems.org/dbm/) using YAML serialization, and **yaml/store** lets you use [pstore](https://stdgems.org/pstore/) with YAML",
+      "mriSourcePath": ["lib/yaml.rb", "lib/yaml/dbm.rb", "lib/yaml/store.rb"],
+      "jrubySourcePath": ["lib/ruby/stdlib/yaml.rb", "lib/ruby/stdlib/yaml"],
+      "sourceRepository": "https://github.com/ruby/yaml",
+      "rubygemsLink": "https://rubygems.org/gems/yaml",
+      "rdocLink": [
+        "https://rubyapi.org/o/yaml",
+        "https://rubyapi.org/o/yaml/dbm",
+        "https://rubyapi.org/o/yaml/store"
+      ],
+      "maintainer": ["Aaron Patterson (tenderlove)", "Hiroshi SHIBATA (hsbt)"],
+      "versions": {
+        "3.3": "0.3.0",
+        "3.2": "0.2.1",
+        "3.1": "0.2.0",
+        "3.0": "0.1.1",
+        "2.7": "0.1.0"
+      }
+    },
+    {
+      "gem": "zlib",
+      "native": true,
+      "autoRequire": false,
+      "description": "Interface to the [zlib compression library](https://en.wikipedia.org/wiki/Zlib)",
+      "mriSourcePath": "ext/zlib",
+      "jrubySourcePath": [
+        "lib/ruby/stdlib/zlib.rb",
+        "core/src/main/java/org/jruby/ext/zlib"
+      ],
+      "sourceRepository": "https://github.com/ruby/zlib",
+      "rubygemsLink": "https://rubygems.org/gems/zlib",
+      "rdocLink": "https://rubyapi.org/o/zlib",
+      "maintainer": "NARUSE, Yui (naruse)",
+      "versions": {
+        "3.3":   "3.1.1",
+        "3.3.1": "3.1.0",
+        "3.3.0": "3.1.0",
+
+        "3.2":   "3.0.0",
+
+        "3.1":   "2.1.1",
+
+        "3.0":   "2.0.0",
+        "3.0.2": "1.1.0",
+        "3.0.1": "1.1.0",
+        "3.0.0": "1.1.0",
+
+        "2.7":   "1.1.0",
+
+        "2.6":   "1.0.0",
+
+        "2.5":   "1.0.0"
+      }
+    }
+  ]
+}

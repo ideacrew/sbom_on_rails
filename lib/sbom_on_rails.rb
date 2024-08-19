@@ -11,6 +11,7 @@ require_relative "sbom_on_rails/debian"
 require_relative "sbom_on_rails/nvd"
 require_relative "sbom_on_rails/apk"
 require_relative "sbom_on_rails/rhel"
+require_relative "sbom_on_rails/ruby_standard_gems"
 
 module SbomOnRails
 end
