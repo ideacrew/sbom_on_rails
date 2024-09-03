@@ -5,6 +5,7 @@ require_relative "item_strategies/dpkg_db"
 require_relative "item_strategies/apk_db"
 require_relative "item_strategies/npm"
 require_relative "item_strategies/rubygems"
+require_relative "item_strategies/ruby_default_gems"
 require_relative "item_strategies/yum_package_list"
 
 module SbomOnRails

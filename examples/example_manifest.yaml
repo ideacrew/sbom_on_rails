@@ -8,3 +8,5 @@ items:
     directory: ../../enroll
   - type: custom_sbom
     sbom_file: ./enroll_custom_asset_sbom.json
+  - type: ruby_default_gems
+    ruby_version: 3.0.6
